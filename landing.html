@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="output.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <!-- <link href="output.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+      <script src="https://cdn.tailwindcss.com"></script>
+
 
     <style>
       .head {
@@ -21,6 +21,9 @@
       }
       .bgcst {
         background-image: linear-gradient(to right, #f40b1a 0%, #221393 100%);
+      }
+      .bgcst2 {
+        background-image: linear-gradient(to right, #670524 0%, #134d93 100%);
       }
       table,thead{
         border-collapse: collapse;
@@ -90,23 +93,22 @@
     </header>
 
     <div
-      class="w-full flex flex-row justify-between border-y-2 py-2 border-red-600 my-6 px-2 text-base"
+      class="sticky w-full flex flex-row justify-between border-y-2 py-2 border-red-600 my-6 px-2 text-base"
     >
       <a href="#" class="">Home</a>
       <a href="#" class="">About Us</a>
-      <a href="#" class="">Call For Papers</a>
+      <a href="./CallForPapers.html" class="">Call For Papers</a>
       <a href="#" class="">Important Dates</a>
       <a href="#" class="">Paper Submission</a>
-      <a href="#" class="">Paper Registration</a>
-      <a href="#" class="">Committee</a>
+      <a href="#registration" class="">Paper Registration</a>
+      <a href="./Commiittee.html" class="">Committee</a>
       <a href="#" class="">Contact Us</a>
     </div>
 
     <div
-      class="flex flex-row justify-between items-center bg-red-100 w-full m-2 border-r-2"
+      class="flex flex-row justify-between items-center w-full"
     >
-      <div class="">
-        <div class="">
+        <!-- <div class="">
           <h1 class="font-bold text-2xl">
             First International Conference Organised on Topic Name
           </h1>
@@ -114,16 +116,45 @@
             International Conference on Next Generation Computing (ICNGC2K25)
           </h1>
           <h1>On 21 July & 23 July 2024</h1>
-        </div>
-      </div>
-      <div>
-        <img class="h-[400px]" src="./assets/build.jpg" alt="DpuBuildingLogo" />
-      </div>
+        </div> -->
+        <img class="rounded m-4 w-[1020px] h-[550px]" src="./assets/DR D Y PATIL INSTITUTE OF TECHNOLOGY (1300 x 550 px) (1).png" alt="">
+        <img class="rounded m-4 ml-0 w-[350px] h-[550px]" src="./assets/build.jpg" alt="DpuBuildingLogo" />
+ 
     </div>
 
     <div class="bgcst h-24 flex flex-col rounded mx-2 justify-center">
-      <h1 class="text-4xl text-center text-white">ABOUT</h1>
+      <h1 class="text-4xl text-center text-white">Call For Papers</h1>
     </div>
+    <section id="about" class="about">
+      <div class="container mx-auto">
+          <div class="flex flex-wrap justify-between">
+  
+            <div class="w-full md:w-1/5 p-4">
+              <div class="accordion-item">
+                  <div class="flex flex-row bgcst2 p-3 rounded text-white">
+                      <h2 class="accordion-button font-bold" type="button">
+                          Track 1: Data Science and Big Data Analytics
+                        </h2>
+                        <i class="fa-regular fa-arrow-down text-2xl"></i>
+                  </div>
+                  <div class="accordion-collapse show">
+                      <div class="accordion-body">
+                          <ul class="list-disc pl-5">
+                              <li>Data Analysis and Visualization</li>
+                              <li>Machine Learning and Predictive Analytics</li>
+                              <li>Deep Learning and Neural Networks</li>
+                              <li>Big Data Technologies and Platforms</li>
+                              <li>Cloud Data Solutions</li>
+                              <li>Natural Language Processing (NLP)</li>
+                              <li>Data Ethics and Responsible AI</li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+  
+ 
 
     <div id="registration">
       <div class="bgcst h-24 flex flex-col rounded mx-2 mt-4 justify-center">

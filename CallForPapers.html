@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link href="output.css" rel="stylesheet" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+      <script src="https://cdn.tailwindcss.com"></script>
+
+
+    <style>
+      .head {
+        background-image: url("./confimg.jpg");
+        background-size: cover; /* Ensures the image covers the entire area */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        width: 100%;
+        height: 100%;
+      }
+      .bgcst {
+        background-image: linear-gradient(to right, #f40b1a 0%, #221393 100%);
+      }
+      .bgcst2 {
+        background-image: linear-gradient(to right, #670524 0%, #134d93 100%);
+      }
+      .bggrad {
+        background-image: linear-gradient(to right, #ffd1e3 0%, #d1d1ff 100%);
+      }
+      .lii{
+        border-bottom: 1px solid black;
+        padding: 3px;
+      }
+      
+      
+    </style>
+  </head>
+  <body>
+    <header class="App">
+      <div class="flex flex-row items-center justify-between my-4 px-4">
+        <img alt="dpulogo" class="h-16 w-48" src="./assets/dpul.png" />
+        <div class="text-red-900 font-bold flex flex-col items-center">
+          <h3 class="text-red-900 text-base">
+            Dr. D. Y. Patil Unitech Society
+          </h3>
+          <h1 class="text-2xl font-bold">
+            DR. D. Y. PATIL INSTITUTE OF TECHNOLOGY
+          </h1>
+          <h1 class="text-sm font-thin">
+            (formerly Dr. D. Y. Patil Institute of Engineering and Technology)
+          </h1>
+          <h5 class="text-sm font-thin">
+            Main Campus, Sant Tukaram Nagar, Pimpri, Pune.
+          </h5>
+          <h1 class="text-base font-semibold">
+            Permanently Affiliated to the Savitribai Phule Pune University.
+            Approved by AICTE New Delhi and DTE Maharashtra.
+          </h1>
+          <h1 class="text-base font-semibold">
+            Accredited by NAAC with a CGPA of 3.74 on a four point scale at A++
+            Grade
+          </h1>
+          <h1 class="text-base font-bold">
+            Department Of Computer Engineering
+          </h1>
+        </div>
+        <div class="flex flex-col items-start justify-center">
+          <img
+            alt="dpulogo"
+            class="h-16 w-48 border rounded-md border-red-600 p-1"
+            src="./assets/logo1.jpeg"
+          />
+          <img
+            alt="dpulogo"
+            class="h-16 w-48 border rounded-md border-red-600 p-1 mt-3"
+            src="./assets/logo2.jpeg"
+          />
+        </div>
+      </div>
+    </header>
+
+    <div
+      class="sticky w-full flex flex-row justify-between border-y-2 py-2 border-red-600 my-6 px-2 text-base"
+    >
+      <a href="#" class="">Home</a>
+      <a href="#" class="">About Us</a>
+      <a href="./CallForPapers.html" class="">Call For Papers</a>
+      <a href="#" class="">Important Dates</a>
+      <a href="#" class="">Paper Submission</a>
+      <a href="#registration" class="">Paper Registration</a>
+      <a href="#" class="">Committee</a>
+      <a href="#" class="">Contact Us</a>
+    </div>
+
+
+    <div class="bgcst h-24 flex flex-col rounded mx-2 justify-center">
+      <h1 class="text-4xl text-center text-white">Call For Papers</h1>
+    </div>
+    <section id="about" class="about">
+        <div class="container mx-auto">
+          <div class="flex flex-wrap justify-between">
+            <div class="w-full md:w-1/5 p-4">
+              <div class="accordion-item">
+                <div class="flex flex-row bgcst2 items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
+                  <h2 class="accordion-button font-bold flex-grow">Track 1: Data Science and Big Data Analytics</h2>
+                  <i class="fa fa-arrow-down text-[22px]"></i>
+                </div>
+                <div class="accordion-content bggrad mt-4 rounded hidden">
+                  <div class="">
+                    <p class="p-3 border-b border-red-500">Data Analysis and Visualization</p>
+                    <p class="p-3 border-b border-red-500">Machine Learning and Predictive Analytics</p>
+                    <p class="p-3 border-b border-red-500">Deep Learning and Neural Networks</p>
+                    <p class="p-3 border-b border-red-500">Big Data Technologies and Platforms</p>
+                    <p class="p-3 border-b border-red-500">Cloud Data Solutions</p>
+                    <p class="p-3 border-b border-red-500">Natural Language Processing (NLP)</p>
+                    <p class="p-3">Data Ethics and Responsible AI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Add more accordion items here as needed -->
+
+            <div class="w-full md:w-1/5 p-4">
+                <div class="accordion-item">
+                  <div class="flex flex-row bgcst2 items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
+                    <h2 class="accordion-button font-bold flex-grow">Track 2: Cyber Security and Privacy</h2>
+                    <i class="fa fa-arrow-down text-[22px]"></i>
+                  </div>
+                  <div class="accordion-content bggrad mt-4 rounded hidden">
+                    <div class="">
+                      <p class="p-3 border-b border-red-500">Network Security</p>
+                      <p class="p-3 border-b border-red-500">Cryptography and Data Protection</p>
+                      <p class="p-3 border-b border-red-500">Cyber Threat Intelligence</p>
+                      <p class="p-3 border-b border-red-500">Security in IoT</p>
+                      <p class="p-3 border-b border-red-500">Cloud Security</p>
+                      <p class="p-3 border-b border-red-500">Blockchain and Security</p>
+                      <p class="p-3">Privacy Enhancing Technologies</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="w-full md:w-1/5 p-4">
+                <div class="accordion-item">
+                  <div class="flex flex-row bgcst2 items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
+                    <h2 class="accordion-button font-bold flex-grow">Track 3: Software Engineering and Quality</h2>
+                    <i class="fa fa-arrow-down text-[22px]"></i>
+                  </div>
+                  <div class="accordion-content bggrad mt-4 rounded hidden">
+                    <div class="">
+                      <p class="p-3 border-b border-red-500">Software Development Methodologies</p>
+                      <p class="p-3 border-b border-red-500">Agile and DevOps Practices</p>
+                      <p class="p-3 border-b border-red-500">Software Testing and Quality Assurance</p>
+                      <p class="p-3 border-b border-red-500">Software Metrics and Measurement</p>
+                      <p class="p-3 border-b border-red-500">Model-Driven Engineering</p>
+                      <p class="p-3 border-b border-red-500">Software Maintenance and Evolution</p>
+                      <p class="p-3">Empirical Software Engineering</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="w-full md:w-1/5 p-4">
+                <div class="accordion-item">
+                  <div class="flex flex-row bgcst2 items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
+                    <h2 class="accordion-button font-bold flex-grow">Track 4: Artificial Intelligence and Robotics</h2>
+                    <i class="fa fa-arrow-down text-[22px]"></i>
+                  </div>
+                  <div class="accordion-content bggrad mt-4 rounded hidden">
+                    <div class="">
+                      <p class="p-3 border-b border-red-500">Robotics and Automation</p>
+                      <p class="p-3 border-b border-red-500">Computer Vision</p>
+                      <p class="p-3 border-b border-red-500">Machine Learning</p>
+                      <p class="p-3 border-b border-red-500">Knowledge Representation and Reasoning</p>
+                      <p class="p-3 border-b border-red-500">Cognitive Computing</p>
+                      <p class="p-3 border-b border-red-500">Swarm Intelligence</p>
+                      <p class="p-3">AI Ethics and Policy</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="w-full md:w-1/5 p-4">
+                <div class="accordion-item">
+                  <div class="flex flex-row bgcst2 items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
+                    <h2 class="accordion-button font-bold flex-grow">Track 5: Cloud Computing and Virtualization</h2>
+                    <i class="fa fa-arrow-down text-[22px]"></i>
+                  </div>
+                  <div class="accordion-content bggrad mt-4 rounded hidden">
+                    <div class="">
+                      <p class="p-3 border-b border-red-500">Cloud Architecture</p>
+                      <p class="p-3 border-b border-red-500">Virtualization Technologies</p>
+                      <p class="p-3 border-b border-red-500">Cloud Security and Privacy</p>
+                      <p class="p-3 border-b border-red-500">Edge and Fog Computing</p>
+                      <p class="p-3 border-b border-red-500">Cloud Resource Management</p>
+                      <p class="p-3 border-b border-red-500">Service-Oriented Architecture</p>
+                      <p class="p-3">Green Cloud Computing</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="w-full md:w-1/5 p-4">
+                <div class="accordion-item">
+                  <div class="flex flex-row bgcst2 items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
+                    <h2 class="accordion-button font-bold flex-grow">Track 6: Internet of Things (IoT)</h2>
+                    <i class="fa fa-arrow-down text-[22px]"></i>
+                  </div>
+                  <div class="accordion-content bggrad mt-4 rounded hidden">
+                    <div class="">
+                      <p class="p-3 border-b border-red-500">IoT Architecture and Protocols</p>
+                      <p class="p-3 border-b border-red-500">IoT Applications</p>
+                      <p class="p-3 border-b border-red-500">IoT Security and Privacy</p>
+                      <p class="p-3 border-b border-red-500">Smart Cities and IoT</p>
+                      <p class="p-3 border-b border-red-500">Wearable and Body Sensor Networks</p>
+                      <p class="p-3 border-b border-red-500">IoT in Healthcare</p>
+                      <p class="p-3">IoT Analytics</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+        </div>
+      </section>
+  
+      <script>
+        function toggleAccordion(element) {
+          const content = element.nextElementSibling;
+          const icon = element.querySelector('i');
+  
+          if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            icon.classList.remove('fa-arrow-down');
+            icon.classList.add('fa-arrow-up');
+          } else {
+            content.classList.add('hidden');
+            icon.classList.remove('fa-arrow-up');
+            icon.classList.add('fa-arrow-down');
+          }
+        }
+      </script>
+
+  
+ 
+
+   
+
+    
+  </body>
+</html>
