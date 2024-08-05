@@ -55,63 +55,74 @@
         margin-bottom: 5px;
         border-bottom: 1px solid #000000;
       }
+      .checkbtn {
+      font-size: 30px;
+      color: rgb(101, 92, 92);
+      cursor: pointer;
+      text-align: center;
+    }
+
+    #check {
+      display: none;
+      
+    }
     </style>
   </head>
   <body>
     <header class="App">
-      <div class="flex flex-row items-center justify-between my-4 px-4">
-        <img alt="dpulogo" class="h-16 w-48" src="./assets/dpul.png" />
-        <div class="text-red-900 font-bold flex flex-col items-center">
+      <div class="flex flex-col lg:flex-row items-center justify-between my-4 px-4 gap-5">
+        <img alt="dpulogo" class="h-11 w-33 lg:h-16 lg:w-48" src="./assets/dpul.png" />
+        <div class=" flex text-red-900 font-bold flex-col items-center text-center">
           <h3 class="text-red-900 text-base">
             Dr. D. Y. Patil Unitech Society
           </h3>
-          <h1 class="text-2xl font-bold">
+          <h1 class=" text-[1.4rem] font-bold ">
             DR. D. Y. PATIL INSTITUTE OF TECHNOLOGY
           </h1>
-          <h1 class="text-sm font-thin">
+          <h1 class="hidden lg:block text-sm font-thin">
             (formerly Dr. D. Y. Patil Institute of Engineering and Technology)
           </h1>
-          <h5 class="text-sm font-thin">
+          <h5 class="hidden lg:block text-sm font-thin">
             Main Campus, Sant Tukaram Nagar, Pimpri, Pune.
           </h5>
-          <h1 class="text-base font-semibold">
+          <h1 class="hidden lg:block text-base font-semibold">
             Permanently Affiliated to the Savitribai Phule Pune University.
             Approved by AICTE New Delhi and DTE Maharashtra.
           </h1>
-          <h1 class="text-base font-semibold">
+          <h1 class=" text-base font-semibold">
             Accredited by NAAC with a CGPA of 3.74 on a four point scale at A++
             Grade
           </h1>
-          <h1 class="text-base font-bold">
+          <h1 class="text-base font-bold ">
             Department Of Computer Engineering
           </h1>
         </div>
-        <div class="flex flex-col items-start justify-center">
-          <img
-            alt="dpulogo"
-            class="h-16 w-48 border rounded-md border-red-600 p-1"
-            src="./assets/logo1.jpeg"
-          />
-          <img
-            alt="dpulogo"
-            class="h-16 w-48 border rounded-md border-red-600 p-1 mt-3"
-            src="./assets/logo2.jpeg"
-          />
+        <div class="flex sm:flex-row lg:flex-col items-start justify-center gap-3">
+          <img alt="dpulogo" class="h-16 w-40 lg:w-48 border rounded-md border-red-600 p-1" src="./assets/logo1.jpeg" />
+          <img alt="dpulogo" class="h-16 w-40 lg:w-48 border rounded-md border-red-600 p-1" src="./assets/logo2.jpeg" />
         </div>
       </div>
     </header>
-
-    <div
-      class="sticky w-full flex flex-row justify-between border-y-2 py-2 border-red-600 my-6 px-2 text-base"
-    >
-      <a href="./index.html" class="">Home</a>
-      <a href="./About.html" class="">About Us</a>
-      <a href="./CallForPapers.html" class="">Call For Papers</a>
-      <a href="./ImportantDates.html" class="">Important Dates</a>
-      <a href="./PaperSub.html" class="">Paper Submission</a>
-      <a href="./PaperReg.html" class="">Paper Registration</a>
-      <a href="./Commiittee.html" class="">Committee</a>
-      <a href="./Contact.html" class="">Contact Us</a>
+  
+    
+    <div class="  border-y-2 border-red-600 my-6 px-2 text-base ">
+      <div class="flex my-2">
+        <input type="checkbox" id="check" class="lg:hidden sm:block">
+        <label for="check" class="checkbtn lg:hidden sm:flex w-[100vh] sm:mt-52">
+          <i onclick="toggleMenu()" class="fas fa-bars text-center"></i>
+        </label>
+      </div>
+      
+      <div id="menu" class="hidden lg:flex flex-col lg:gap-0 gap-2 items-center sticky w-full lg:flex-row lg:justify-between justify-center my-6 px-2 text-[20px] lg:text-base ">
+        <a href="./index.html" class="">Home</a>
+        <a href="./About.html" class="">About Us</a>
+        <a href="./CallForPapers.html" class="">Call For Papers</a>
+        <a href="./ImportantDates.html" class="">Important Dates</a>
+        <a href="./PaperSub.html" class="">Paper Submission</a>
+        <a href="./PaperReg.html" class="">Paper Registration</a>
+        <a href="./Commiittee.html" class="">Committee</a>
+        <a href="./Contact.html" class="">Contact Us</a>
+      </div>
     </div>
 
     
@@ -124,14 +135,14 @@
       <div class="bgcst h-24 flex flex-col rounded mx-2 mt-4 justify-center">
         <h1 class="text-4xl text-center text-white">Paper Registration</h1>
       </div>
-      <div class="flex flex-row">
-        <div class="ml-4 flex flex-col items-center rounded w-[45%] bggrad">
+      <div class="flex flex-col items-center lg:flex-row">
+        <div class="lg:ml-4 flex flex-col items-center rounded lg:mt-0 mt-4 w-[95%] bggrad">
           <h2 class="my-3 text-2xl font-semibold text-red-900">Registration Fees</h2>
           <table class="text-center w-full justify-between">
             <thead>
               <tr class="">
                 <th>Category</th>
-                <th class="m-3">(Early-bird Registration)<br />10th Oct 2024</th>
+                <th class="lg:m-3">(Early-bird Registration)<br />10th Oct 2024</th>
                 <th>(Final Registration)<br />12th Oct 2024</th>
               </tr>
             </thead>
@@ -165,7 +176,7 @@
           </table>
         </div>
 
-        <div class="w-1/5 text-center bggrad2 rounded ml-4">
+        <div class="w-[90%] lg:w-1/5 text-center bggrad2 rounded my-4 lg:ml-4">
           <h2 class="my-3 text-2xl font-semibold text-red-900">Paper Registration</h2>
           <ul class="text-base">
             <li>Registration fee includes a conference kit, e-Conference Proceedings-in PEN drive, lunch and high tea for both the days.</li>
@@ -174,7 +185,7 @@
             <li>If a paper is authored by more than one author, it is mandatory for at least one author to register for the conference.</li>
         </ul>
         </div>
-        <div class="w-1/5 text-center bggrad3 rounded ml-4">
+        <div class="w-[80%] lg:w-1/5 text-center bggrad3 rounded lg:ml-4">
           <h2 class="my-3 text-2xl font-semibold text-red-900">Paper Guidelines</h2>
           <ul class="text-base">
             <li>Presentation will be for a maximum of 8-10 minutes followed by a Q-A session.</li>
@@ -190,6 +201,15 @@
       </div>
     </div>
 
-    
+    <script>
+      function toggleMenu() {
+        var menu = document.getElementById("menu");
+        if (menu.style.display === "flex") {
+          menu.style.display = "none";
+        } else {
+          menu.style.display = "flex";
+        }
+      }
+    </script>
   </body>
 </html>

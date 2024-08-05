@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- <link href="output.css" rel="stylesheet" /> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
 
-      <script src="https://cdn.tailwindcss.com"></script>
-
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
       .head {
@@ -25,21 +27,19 @@
       .bgcst2 {
         background-image: linear-gradient(to right, #670524 0%, #134d93 100%);
       }
-      .bggrad {
-        background-image: linear-gradient(to right, #ffd1e3 0%, #d1d1ff 100%);
+      table,
+      thead {
+        border-collapse: collapse;
+        border: 1px solid #000000;
       }
-      .bgcst3{
-        background-image: url("./assets/confbg1.jpg");
-        background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-        
-
+      td {
+        font-size: 16px;
+        border-bottom: 1px solid #000000;
+        padding: 14px;
       }
-      .bggrad h1{
-        margin: 12px 0 0 0;
-        font-size: 18px;
-        border-bottom: 1px solid rgb(248, 142, 142);
+      th {
+        font-weight: 650;
+        padding: 8px;
       }
       .checkbtn {
       font-size: 30px;
@@ -52,6 +52,13 @@
       display: none;
       
     }
+      /* li{
+        padding-bottom: 5px;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-bottom: 5px;
+        border-bottom: 1px solid #000000;
+      } */
     </style>
   </head>
   <body>
@@ -111,39 +118,59 @@
         <a href="./Contact.html" class="">Contact Us</a>
       </div>
     </div>
-  
-
-    <div class="bgcst h-24 flex flex-col rounded mx-2 mt-4 justify-center">
-        <h1 class="text-4xl text-center text-white">Important Dates</h1>
-      </div>
-    <div class="mt-8 bgcst3 flex flex-col justify-center items-center w-full">
-        <div class="my-16 rounded bggrad w-[85%] lg:w-2/5 flex flex-col justify-center items-center">
-            <div class="w-full p-4 lg:p-6">
-                <h1 class="text-6xl text-center font-semibold mt-4 mb-4">Important Dates</h1>
-            <h1 class="mt-4"><b>Conference Date : </b>date</h1>
-            <h1><b>Deadline for Paper Submission : </b>date</h1>
-            <h1><b>Acceptance Intimation : </b>date</h1>
-            <h1><b>Registration & Camera-ready paper submission : </b>date</h1>
-            <h1><b>Early Bird Registration : </b>date</h1>
-            </div>
-        </div>
+    <div class="bgcst h-24 flex flex-col rounded mx-2 justify-center">
+      <h1 class="text-4xl text-center text-white">Paper Submission</h1>
     </div>
 
-    
-    <script>
-      function toggleMenu() {
-        var menu = document.getElementById("menu");
-        if (menu.style.display === "flex") {
-          menu.style.display = "none";
-        } else {
-          menu.style.display = "flex";
-        }
+    <div class="text-lg px-4 lg:px-11 pt-7">
+      <strong>Instructions:</strong>
+    </div>
+
+    <div>
+      <ul class="px-8 lg:px-24 py-7 space-y-4">
+        <li>
+        ● Research Papers should be submitted through easychair login only. The
+          link for the same is given in the adjacent paper submission button
+        </li>
+        <li>
+        ● The research paper should be original and unpublished work with less
+          10% plagiarism. Plagiarized work would lead to disqualification
+        </li>
+        <li>
+        ● The full paper should be submitted along with all the authors and
+          their affiliation
+        </li>
+        <li>
+        ● All the submitted papers for ICNGC-2K24 will undergo the peer review
+          process
+        </li>
+        <li class="inline-block">
+        ● All accepted, registered, and presented quality papers will be
+          submitted to T & F CRC Press & IGI Global SCOPUS index book preceding
+          and selected paper will process in SCOPUS Index<strong> Taylor and Francis
+          Special issue of Q1/Q2 Journal</strong>  Publication.
+        </li>
+        <li>
+        ● No further addition/changes of author name is possible after the final
+          selection of the paper
+        </li>
+      </ul>
+    </div>
+    <div>
+        
+      <a target="_blank" href="https://easychair.org/account2/signin_timeout?l=2721218034701561964" class="text-lg underline text-red-700 justify-center flex flex-col pb-8 "><strong class="text-center">Log in to EasyChair for ICNGC-2K25</strong></a>
+  
+  </div>
+
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("menu");
+      if (menu.style.display === "flex") {
+        menu.style.display = "none";
+      } else {
+        menu.style.display = "flex";
       }
-    </script>
- 
-
-    
-
-    
+    }
+  </script>
   </body>
 </html>
