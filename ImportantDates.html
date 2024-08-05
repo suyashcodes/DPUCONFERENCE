@@ -42,7 +42,7 @@
         border-bottom: 1px solid rgb(248, 142, 142);
       }
       .checkbtn {
-      font-size: 20px;
+      font-size: 30px;
       color: rgb(101, 92, 92);
       cursor: pointer;
       text-align: center;
@@ -93,12 +93,14 @@
     
   
     <div class="  border-y-2 border-red-600 my-6 px-2 text-base ">
-      <input type="checkbox" id="check" class="lg:hidden sm:block">
-      <label for="check" class="checkbtn lg:hidden sm:flex w-[100vh] sm:mt-52">
-        <i onclick="toggleMenu()" class="fas fa-bars mx-[50%]  translate-x-[-50%] "></i>
-      </label>
+      <div class="flex my-2">
+        <input type="checkbox" id="check" class="lg:hidden sm:block">
+        <label for="check" class="checkbtn lg:hidden sm:flex w-[100vh] sm:mt-52">
+          <i onclick="toggleMenu()" class="fas fa-bars text-center"></i>
+        </label>
+    </div>
       
-      <div id="menu" class="hidden lg:flex flex-col items-center sticky w-full lg:flex-row lg:justify-between justify-center my-6 px-2 text-base ">
+      <div id="menu" class="hidden lg:flex flex-col lg:gap-0 gap-2 items-center sticky w-full lg:flex-row lg:justify-between justify-center my-6 px-2 text-[20px] lg:text-base ">
         <a href="./index.html" class="">Home</a>
         <a href="./About.html" class="">About Us</a>
         <a href="./CallForPapers.html" class="">Call For Papers</a>
