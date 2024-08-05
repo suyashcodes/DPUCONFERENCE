@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <!-- <link href="output.css" rel="stylesheet" /> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
 
-      <script src="https://cdn.tailwindcss.com"></script>
-
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
       .head {
@@ -25,90 +27,464 @@
       .bgcst2 {
         background-image: linear-gradient(to right, #670524 0%, #134d93 100%);
       }
-      table,thead{
-        border-collapse: collapse;
+      /* table,
+      thead {
+       border-collapse: collapse;
         border: 1px solid #000000;
-        
       }
-      td{
+      td {
         font-size: 16px;
         border-bottom: 1px solid #000000;
         padding: 14px;
       }
-      th{
+      th {
         font-weight: 650;
         padding: 8px;
+      } */
+      .tab {
+        /* border-radius: 10px; */
+        border: 1px solid #000000;
+        max-width: 700px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
       }
-      li{
+      .tdef {
+        width: 50%;
+        text-align: center;
+        border: 1px solid #000000;
+      }
+      .thed {
+        border-radius: 10px;
+      }
+      li {
         padding-bottom: 5px;
         padding-left: 8px;
         padding-right: 8px;
         margin-bottom: 5px;
         border-bottom: 1px solid #000000;
       }
+      .checkbtn {
+      font-size: 20px;
+      color: rgb(101, 92, 92);
+      cursor: pointer;
+      text-align: center;
+    }
+
+    #check {
+      display: none;
+      
+    }
     </style>
   </head>
   <body>
     <header class="App">
-      <div class="flex flex-row items-center justify-between my-4 px-4">
-        <img alt="dpulogo" class="h-16 w-48" src="./assets/dpul.png" />
-        <div class="text-red-900 font-bold flex flex-col items-center">
+      <div class="flex flex-col lg:flex-row items-center justify-between my-4 px-4 gap-5">
+        <img alt="dpulogo" class="h-11 w-33 lg:h-16 lg:w-48" src="./assets/dpul.png" />
+        <div class=" flex text-red-900 font-bold flex-col items-center text-center">
           <h3 class="text-red-900 text-base">
             Dr. D. Y. Patil Unitech Society
           </h3>
-          <h1 class="text-2xl font-bold">
+          <h1 class=" text-[1.4rem] font-bold ">
             DR. D. Y. PATIL INSTITUTE OF TECHNOLOGY
           </h1>
-          <h1 class="text-sm font-thin">
+          <h1 class="hidden lg:block text-sm font-thin">
             (formerly Dr. D. Y. Patil Institute of Engineering and Technology)
           </h1>
-          <h5 class="text-sm font-thin">
+          <h5 class="hidden lg:block text-sm font-thin">
             Main Campus, Sant Tukaram Nagar, Pimpri, Pune.
           </h5>
-          <h1 class="text-base font-semibold">
+          <h1 class="hidden lg:block text-base font-semibold">
             Permanently Affiliated to the Savitribai Phule Pune University.
             Approved by AICTE New Delhi and DTE Maharashtra.
           </h1>
-          <h1 class="text-base font-semibold">
+          <h1 class=" text-base font-semibold">
             Accredited by NAAC with a CGPA of 3.74 on a four point scale at A++
             Grade
           </h1>
-          <h1 class="text-base font-bold">
+          <h1 class="text-base font-bold ">
             Department Of Computer Engineering
           </h1>
         </div>
-        <div class="flex flex-col items-start justify-center">
-          <img
-            alt="dpulogo"
-            class="h-16 w-48 border rounded-md border-red-600 p-1"
-            src="./assets/logo1.jpeg"
-          />
-          <img
-            alt="dpulogo"
-            class="h-16 w-48 border rounded-md border-red-600 p-1 mt-3"
-            src="./assets/logo2.jpeg"
-          />
+        <div class="flex sm:flex-row lg:flex-col items-start justify-center gap-3">
+          <img alt="dpulogo" class="h-16 w-40 lg:w-48 border rounded-md border-red-600 p-1" src="./assets/logo1.jpeg" />
+          <img alt="dpulogo" class="h-16 w-40 lg:w-48 border rounded-md border-red-600 p-1" src="./assets/logo2.jpeg" />
         </div>
       </div>
     </header>
-
-    <div
-      class="sticky w-full flex flex-row justify-between border-y-2 py-2 border-red-600 my-6 px-2 text-base"
-    >
-    <a href="./index.html" class="">Home</a>
-    <a href="./About.html" class="">About Us</a>
-    <a href="./CallForPapers.html" class="">Call For Papers</a>
-    <a href="./ImportantDates.html" class="">Important Dates</a>
-    <a href="./PaperSub.html" class="">Paper Submission</a>
-    <a href="./PaperReg.html" class="">Paper Registration</a>
-    <a href="./Commiittee.html" class="">Committee</a>
-    <a href="./Contact.html" class="">Contact Us</a>
-    </div>
-
-    <div>
-
-    </div>
-
+  
     
+  
+    <div class="  border-y-2 border-red-600 my-6 px-2 text-base ">
+      <input type="checkbox" id="check" class="lg:hidden sm:block">
+      <label for="check" class="checkbtn lg:hidden sm:flex w-[100vh] sm:mt-52">
+        <i onclick="toggleMenu()" class="fas fa-bars mx-[50%]  translate-x-[-50%] "></i>
+      </label>
+      
+      <div id="menu" class="hidden lg:flex flex-col items-center sticky w-full lg:flex-row lg:justify-between justify-center my-6 px-2 text-base ">
+        <a href="./index.html" class="">Home</a>
+        <a href="./About.html" class="">About Us</a>
+        <a href="./CallForPapers.html" class="">Call For Papers</a>
+        <a href="./ImportantDates.html" class="">Important Dates</a>
+        <a href="./PaperSub.html" class="">Paper Submission</a>
+        <a href="./PaperReg.html" class="">Paper Registration</a>
+        <a href="./Commiittee.html" class="">Committee</a>
+        <a href="./Contact.html" class="">Contact Us</a>
+      </div>
+    </div>
+  
+
+    <!-- Cheif -->
+    <div class="justify-center flex pt-7">
+      <table class="tab">
+        <tr>
+          <th class="thed" colspan="2">CHIEF PATRON</th>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0">
+            Hon'ble Dr. P. D. Patil Chairman <br />- Dr. D. Y. PatilUnitech
+            Society, Pune & Chancellor, Dr. D. Y. PatilVidyapeeth, Pune.
+          </td>
+
+          <td class="tdef border-r-0">
+            Hon'ble Dr.(Mrs) Bhagyashree P. Patil Vice Chairperson, Dr. D.Y.
+            PatilUnitech Society, Pune & Pro-Chancellor Dr. D.Y.
+            PatilVidyapeeth, Pune (Deemed to be University)
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="text-center">
+            Hon'ble Dr. Somnath P. Patil Secretary, Dr. D. Y. PatilUnitech
+            Society, Pune.
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Patron -->
+
+    <div class="justify-center flex pt-7">
+      <table class="tab">
+        <tr>
+          <th class="thed" colspan="2">PATRON</th>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0">
+            Dr. S. S. Chitlange - CEO - Administration, Dr. D. Y.
+            PatilUnitechSociety,Pune
+          </td>
+
+          <td class="tdef border-r-0">
+            Prof.Dheeraj Agrawal - Director, Central Corporate Relations,Alumni
+            and Branding Dr. D. Y. PatilUnitechSociety,Pune
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="text-center">
+            Dr. Avinash Thakur - Executive Director, Dr. D. Y.
+            PatilUnitechSociety,Pune
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Advisory commitee -->
+    <div class="justify-center flex pt-7">
+      <table class="tab">
+        <tr>
+          <th class="thed" colspan="2">ADVISORY COMMITEE</th>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0">
+            Dr. Surya<br />
+            S Durbha Professor<br />
+            IIT Bombay
+          </td>
+
+          <td class="tdef border-r-0">
+            Dr. Sachin Deshmukh<br />
+            Professor & Head, CS&IT,<br />
+            Dr. BAMU, Aurnagabad
+          </td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0">
+            Dr. Srikant Srinivasan<br />
+            Associate Dean, <br />
+            Global Engagements, Plaksha University<br />
+          </td>
+          <td class="tdef border-r-0">
+            Dr. Chirag Modi<br />
+            Associate Professor<br />
+            NIT Goa
+          </td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0">
+            Dr. Milind Penurkar<br />
+            Assistant Professor in Dept. of CSE,<br />
+            Indian Institute of Information Technology, Nagpur
+          </td>
+          <td class="tdef border-r-0">
+            Dr. Rajesh Ingle<br />
+            Vice-Chancellor, <br />
+            Symbiosis Skills and Professional University
+          </td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0">
+            Dr. ParikshitMahalle<br />
+            Professor & Head, <br />
+            VIIT, Pune
+          </td>
+          <td class="tdef border-r-0">
+            Dr. Thammi Reddy,<br />
+            Professor,<br />
+            GITAM University, AP
+          </td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0">
+            Dr. Sham Akashe<br />
+            Professor, ENTC,<br />
+            ITM University Gwalior
+          </td>
+          <td class="tdef border-r-0">
+            Dr. SubhashShinde<br />
+            Principal, <br />
+            LTT, Mumbai
+          </td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">
+            Dr. NilanjanDey<br />
+            Associate Professor<br />
+            Techno International New Town,<br />
+            Kolkata, India
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Local advisory commitee -->
+
+    <div class="justify-center flex pt-7">
+      <table class="tab">
+        <tr>
+          <th class="thed" colspan="2">LOCAL ADVISORY COMMITEE</th>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0">
+            Dr. D. G. Bhalke<br />
+            Head, E&TC Department
+          </td>
+
+          <td class="tdef border-r-0">
+            Dr. Nitin Sherje<br />
+            Head, Mechanical Department
+          </td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0">
+            Dr. Mithra Venkatesan<br />
+            Head, AI&DS Department
+          </td>
+          <td class="tdef border-r-0">
+            Dr. Deepa Joshi<br />
+            Head, Civil Department
+          </td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0">
+            Dr. AnupVibhute<br />
+            Head, Instrumentation Department
+          </td>
+          <td class="tdef border-r-0">
+            Dr. Shankar Chavan<br />
+            Head, Electrical Department
+          </td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0">
+            Dr. ShikalgarNiyaj<br />
+            Head, Automation & Robotics Department
+          </td>
+          <td class="tdef border-r-0">
+            Dr. ShubhangiBorse<br />
+            Head, Information Technology Department
+          </td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0">
+            Dr. Radhika Menon<br />
+            Dean International Relations Cell
+          </td>
+          <td class="tdef border-r-0">
+            Dr. PushparajWarke<br />
+            Dean FE
+          </td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">
+            Dr. Kiran Kale<br />
+            Head, MBA
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Organizing chair -->
+
+    <div class="justify-center flex pt-7">
+      <table class="tab">
+        <tr>
+          <th class="thed" colspan="2">ORGANIZING CHAIR</th>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">
+            Dr. LalitK.Wadhwa - Principal<br />
+            Dr. D. Y. Patil Institute of Technology,<br />
+            Pimpri, Pune
+          </td>
+
+          <td class="tdef border-r-0 border-b-0">
+            Dr. Pramod D. Patil - Dean R&D<br />
+            Dr. D. Y. Patil Institute of Technology,<br />
+            Pimpri, Pune
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- convener -->
+
+    <div class="justify-center flex pt-7">
+      <table class="tab">
+        <tr>
+          <th class="thed" colspan="2">CONVENER</th>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0 border-r-0" colspan="2">
+            Dr. Vinod Kimbahune<br />
+            (HoD – Computer Engineering)
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- co-convener -->
+
+    <div class="justify-center flex pt-7">
+      <table class="tab">
+        <tr>
+          <th class="thed" colspan="2">CO-CONVENER</th>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Dr. Chaya Jadhav</td>
+
+          <td class="tdef border-r-0 border-b-0">Dr. Rachna Somkunwar</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Dr. Atul Kathole</td>
+
+          <td class="tdef border-r-0 border-b-0">Dr. Kapil Vhatkar</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Organizing commitee -->
+
+    <div class="justify-center flex py-7 ">
+      <table class="tab">
+        <tr>
+          <th class="thed" colspan="2">ORGANIZING COMMITEE</th>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Dr. Rajesh Bharati</td>
+
+          <td class="tdef border-r-0 border-b-0">Dr. Rupesh Mahajan</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Dr. Swapnil Deshmukh</td>
+
+          <td class="tdef border-r-0 border-b-0">Dr. Savita Kumbhare</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Mr. Digambar Jadhav</td>
+
+          <td class="tdef border-r-0 border-b-0">Ms. Pooja Sakunde</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Mrs. Chitrlekha Dwivedi</td>
+
+          <td class="tdef border-r-0 border-b-0">Mrs. Vasudha Phaltankar</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Mrs. Bharti Sahu</td>
+
+          <td class="tdef border-r-0 border-b-0">Ms. Deepika Jaiswal</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Mrs. Zarina Shaikh</td>
+
+          <td class="tdef border-r-0 border-b-0">Mrs. Ashwini Jadhav</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Mr. Sharad Adsure</td>
+
+          <td class="tdef border-r-0 border-b-0">Mrs. Sharddha Shingne</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Mrs. Arti Sonawane</td>
+
+          <td class="tdef border-r-0 border-b-0">Mrs. Aarju Jain</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Mrs Bhakti Puranik</td>
+
+          <td class="tdef border-r-0 border-b-0">Mrs. Suvarna Patil</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Ms. Vrunda Mahajan</td>
+
+          <td class="tdef border-r-0 border-b-0">Mrs. Shweta Koparde</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Dr. Jameer Kotwal</td>
+
+          <td class="tdef border-r-0 border-b-0">Mr. Sukesh Kothari</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Mrs. Sarika Sawarkar</td>
+
+          <td class="tdef border-r-0 border-b-0">Mrs. Varda Gotmare</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Mrs. Trupti Deshmukh</td>
+
+          <td class="tdef border-r-0 border-b-0">Mrs. Priyanka Chetwani</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Mr. Mohit Saxena</td>
+
+          <td class="tdef border-r-0 border-b-0">Dr. Swapnil Deshmukh</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Ms. Priyanka Jadhav</td>
+
+          <td class="tdef border-r-0 border-b-0">Mr. Amol Dhepe</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Mrs. Sharddha Shirsath</td>
+
+          <td class="tdef border-r-0 border-b-0">Ms. Pranal Kakde</td>
+        </tr>
+        <tr>
+          <td class="tdef border-l-0 border-b-0">Mrs. Sonal Dhole</td>
+
+          <td class="tdef border-r-0 border-b-0">Ms. Yatri Davda</td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>

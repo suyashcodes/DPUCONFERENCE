@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- <link href="output.css" rel="stylesheet" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      .head {
+        background-image: url("./confimg.jpg");
+        background-size: cover; /* Ensures the image covers the entire area */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents the image from repeating */
+        width: 100%;
+        height: 100%;
+      }
+      .bgcst {
+        background-image: linear-gradient(to right, #f40b1a 0%, #221393 100%);
+      }
+      .bgcst2 {
+        background-image: linear-gradient(to right, #670524 0%, #134d93 100%);
+      }
+      .checkbtn {
+      font-size: 20px;
+      color: rgb(101, 92, 92);
+      cursor: pointer;
+      text-align: center;
+    }
+
+    #check {
+      display: none;
+      
+    }
+      /* .bgcst{
+        background-image: url("./assets/confbg1.jpg");
+      } */
+    </style>
+  </head>
+  <body>
+    <header class="App">
+        <div class="flex flex-col lg:flex-row items-center justify-between my-4 px-4 gap-5">
+          <img alt="dpulogo" class="h-11 w-33 lg:h-16 lg:w-48" src="./assets/dpul.png" />
+          <div class=" flex text-red-900 font-bold flex-col items-center text-center">
+            <h3 class="text-red-900 text-base">
+              Dr. D. Y. Patil Unitech Society
+            </h3>
+            <h1 class=" text-[1.4rem] font-bold ">
+              DR. D. Y. PATIL INSTITUTE OF TECHNOLOGY
+            </h1>
+            <h1 class="hidden lg:block text-sm font-thin">
+              (formerly Dr. D. Y. Patil Institute of Engineering and Technology)
+            </h1>
+            <h5 class="hidden lg:block text-sm font-thin">
+              Main Campus, Sant Tukaram Nagar, Pimpri, Pune.
+            </h5>
+            <h1 class="hidden lg:block text-base font-semibold">
+              Permanently Affiliated to the Savitribai Phule Pune University.
+              Approved by AICTE New Delhi and DTE Maharashtra.
+            </h1>
+            <h1 class=" text-base font-semibold">
+              Accredited by NAAC with a CGPA of 3.74 on a four point scale at A++
+              Grade
+            </h1>
+            <h1 class="text-base font-bold ">
+              Department Of Computer Engineering
+            </h1>
+          </div>
+          <div class="flex sm:flex-row lg:flex-col items-start justify-center gap-3">
+            <img alt="dpulogo" class="h-16 w-40 lg:w-48 border rounded-md border-red-600 p-1" src="./assets/logo1.jpeg" />
+            <img alt="dpulogo" class="h-16 w-40 lg:w-48 border rounded-md border-red-600 p-1" src="./assets/logo2.jpeg" />
+          </div>
+        </div>
+      </header>
+    
+      
+    
+      <div class="  border-y-2 border-red-600 my-6 px-2 text-base ">
+        <input type="checkbox" id="check" class="lg:hidden sm:block">
+        <label for="check" class="checkbtn lg:hidden sm:flex w-[100vh] sm:mt-52">
+          <i onclick="toggleMenu()" class="fas fa-bars mx-[50%]  translate-x-[-50%] "></i>
+        </label>
+        
+        <div id="menu" class="hidden lg:flex flex-col items-center sticky w-full lg:flex-row lg:justify-between justify-center my-6 px-2 text-base ">
+          <a href="./index.html" class="">Home</a>
+          <a href="./About.html" class="">About Us</a>
+          <a href="./CallForPapers.html" class="">Call For Papers</a>
+          <a href="./ImportantDates.html" class="">Important Dates</a>
+          <a href="./PaperSub.html" class="">Paper Submission</a>
+          <a href="./PaperReg.html" class="">Paper Registration</a>
+          <a href="./Commiittee.html" class="">Committee</a>
+          <a href="./Contact.html" class="">Contact Us</a>
+        </div>
+      </div>
+
+    <div class="bgcst h-24 flex flex-col rounded mx-2 justify-center">
+      <h1 class="text-4xl text-center text-white">ABOUT US</h1>
+    </div>
+
+    <div>
+      <div class="text-lg px-11">
+        <strong> About<span class="text-red-600"> Institute</span></strong>
+      </div>
+
+      <div class="px-28 py-6 ">
+        <div>
+          <p>
+            Welcome to Dr. D. Y. Patil Institute of Technology (DIT), Pimpri,
+            Pune. The oldest campus of Dr. D. Y. Patil group of Institutions.
+            This campus is started in year 1983 and further nurtured by our
+            visionary Chairman Hon’ble Dr. P. D. Patil with the vision
+            Empowerment through knowledge Better Education Better World. The
+            institute is being progressed under the dynamic leadership of
+            Hon’ble Dr. Somnath Patil.
+          </p>
+          <br />
+          <p>
+            Institute has well maintained lawns, trees and handy plantations
+            leading to a healthy and pleasant environment. This institute is in
+            the heart of the city. Walkable distance from public transports such
+            as Bus, Railway and Metro. This institute offers<strong>
+              9 Undergraduate Programs</strong
+            >
+            including programs in emerging areas such as Artificial
+            Intelligence, Data Science, Automation and Robotics and
+            <strong>5 PG </strong>programs.
+          </p>
+          <br />
+          <p>
+            This institute is awarded<strong>Best College Award</strong> by
+            Savitribai Phule Pune University. The Institute is<strong
+              >ranked in top 200</strong
+            >
+            Engineering Institutions in India including IIT’s and NIT’s
+            in<strong>NIRF ranking</strong> framework by MHRD, Government of
+            India. The institute is accredited by <strong>NAAC</strong> with A
+            grade CGPA 3.26.<strong>
+              Seven UG Programs and 1 PG Program (MBA)</strong
+            >
+            are accredited by the National Board of Accreditation
+            (<strong>NBA</strong>) for maintaining international quality
+            standards in technical education.
+          </p>
+          <br />
+          <p>
+            The Institute has been augmented with a new infrastructure which
+            interplays intelligent design and space articulation with
+            ergonomically designed classrooms and laboratories having an
+            impressive aesthetic look. The classrooms and seminar-halls are
+            spacious, ICT enabled, along with high-speed internet and wi-fi
+            facility. Laboratories are well equipped with latest equipment’s and
+            software. Library has a rich collection of printed as well as
+            electronic resources including subscription to many national and
+            international journals, magazines, and periodicals.
+          </p>
+          <br />
+          <p>
+            World class hostel facilities are available for boys and girls in
+            campus. 24 hours medical facilities are available at Dr. D. Y. Patil
+            Medical College Hospital in a vicinity of the campus. DIT has left
+            no stone untouched to reach the height of merit in engineering
+            education. Qualified, veteran and proficient faculty at the
+            Institute is the basic backbone of the Institute involved in
+            teaching learning process to achieve academic excellence. Faculty
+            members are also involved in research and have undertaken research
+            individually as well as in collaboration. There is continuous
+            improvement in academics results of our students in the university
+            as many university rankers are being produced by the Institute.
+          </p>
+          <br />
+          <p>
+            To viaduct the gaps in academia, Institute has collaborations with
+            industries and organizations at national and international level. To
+            accomplish holistic development of the students, the Institute has
+            various student’s chapters of professional organizations. The
+            Institute is in the close vicinity of two major industrial zones -
+            Rajiv Gandhi Infotech Park, Pune and MIDC Industrial area of
+            Bhosari, Chinchwad & Chakan. The preferred location for campus
+            drives by the industries. The professional as well as technical
+            trainings with industries are being conducted right from first year
+            itself for the students to enhance their employability skills. All
+            eligible and interested students are being placed every year. The
+            institute has strong tie up with Industries for Internship. The
+            institute has an ecosystem for inculcating a tradition of innovation
+            driven entrepreneurship in faculty and students.
+          </p>
+        </div>
+      </div>
+
+      <div class="text-lg px-11">
+        <strong>
+          About Department of<span class="text-red-600">
+            Computer Engineering</span
+          ></strong
+        >
+      </div>
+
+      <div class="px-28 py-6">
+        <div>
+          <p>
+            The Department of Computer Engineering at Dr. D.Y. Patil Institute
+            of Technology, Pimpri, Pune, established in 1998, has a
+            long-standing commitment to excellence in education and research.
+            Offering<strong>
+              undergraduate (UG), postgraduate (PG), and doctoral (Ph.D.)
+              programs</strong
+            >, the department provides comprehensive education that blends
+            theoretical knowledge with practical skills, preparing students for
+            successful careers in academia, industry, and research.
+          </p>
+          <br />
+          <p>
+            In line with its mission to foster innovation and collaboration, the
+            Department is organizing the
+            <strong
+              >"International Conference on Next Generation Computing
+              (ICNGC2K25)"</strong
+            >
+            during the first week of February 2025. This prestigious event is
+            designed to serve as an international forum for researchers,
+            academicians, industry experts, and students to present their latest
+            research findings, share insights, and discuss the future trends in
+            computing technologies. The conference will cover a broad spectrum
+            of topics, including but not limited to
+            <strong>
+              artificial intelligence, machine learning, data science,
+              cybersecurity, cloud computing, and the Internet of Things
+              (IoT)</strong
+            >.
+          </p>
+          <br />
+        </div>
+      </div>
+      <div class="text-lg px-11">
+        <strong> About<span class="text-red-600"> Conference</span></strong>
+      </div>
+      <div class="px-28 py-6">
+        <div>
+          <p>
+            A standout feature of<strong>ICNGC2K25</strong> is its collaboration
+            with renowned publication houses to ensure high-quality
+            dissemination of research. Selected papers from the conference will
+            be considered for publication in
+            <strong>Q1/Q2 journals from Taylor & Francis</strong> , offering
+            significant academic recognition and visibility. Additionally, the
+            conference will include<strong
+              >SCOPUS-indexed book chapter series with Taylor & Francis CRC
+              Press, IGI Global, and Router CRC Press</strong
+            >
+            , highlighting the conference's dedication to academic rigor and its
+            impact on the global research community.
+          </p>
+          <br />
+          <p>
+            <strong>ICNGC2K25</strong> aims to provide a dynamic platform for
+            participants to engage in keynote speeches, technical sessions,
+            panel discussions, and workshops, fostering a rich exchange of ideas
+            and knowledge. This event underscores the Department's commitment to
+            advancing the field of computer engineering and promoting a culture
+            of research and innovation.
+          </p>
+          <br />
+          <p>
+            <strong
+              >The International Conference on Next Generation Computing
+              (ICNGC2K25)</strong
+            >
+            is set to be a landmark event, bringing together a diverse group of
+            experts and enthusiasts to drive forward the boundaries of computing
+            research. It represents the Department of Computer Engineering's
+            ongoing efforts to contribute to the global knowledge base and
+            support the development of next-generation computing technologies.
+            As the department continues to build on its legacy of
+            excellence,<strong>ICNGC2K25</strong> will play a pivotal role in
+            shaping the future of computing research and innovation.
+          </p>
+          <br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
