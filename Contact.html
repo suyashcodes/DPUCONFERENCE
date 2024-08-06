@@ -34,8 +34,14 @@
       
     }
     </style>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <header class="App">
       <div class="flex flex-col lg:flex-row items-center justify-between my-4 px-4 gap-5">
         <img alt="dpulogo" class="h-11 w-33 lg:h-16 lg:w-48" src="./assets/dpul.png" />
@@ -100,7 +106,7 @@
         <h1 class="text-4xl text-center text-white">Contact Us</h1>
       </div>
       <div class="flex flex-col lg:flex-row mt-6">
-        <div class="flex flex-col justify-center items-center">
+        <div class="flex flex-col justify-center items-center" data-aos="fade-up">
           <h1 class="text-4xl font-semibold text-red-900 mb-4">Address</h1>
           <h4 class="text-lg w-[85%] lg:w-3/5 text-center">
             Dr. D. Y. Patil Institute of Technology
@@ -130,6 +136,7 @@
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
+            data-aos="fade-up"
           ></iframe>
         </div>
       </div>
