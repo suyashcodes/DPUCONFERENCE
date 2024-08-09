@@ -27,6 +27,19 @@
       .bgcst2 {
         background-image: linear-gradient(to right, #670524 0%, #134d93 100%);
       }
+      .bggrad {
+        background-image: linear-gradient(to right, #ffd1e3 0%, #d1d1ff 100%);
+      }
+      .gradient-text {
+  background: linear-gradient(to right, #f40b1a 0%, #221393 75%,#f40b1a 100%);
+  /* background: linear-gradient(to right, #f40b1a 0%, #221393 100%); */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+      .bggrad {
+        background-image: linear-gradient(to right, #fee3ee 0%, #e1e1fc 100%);
+      }
       .checkbtn {
       font-size: 30px;
       color: rgb(101, 92, 92);
@@ -38,12 +51,18 @@
       display: none;
       
     }
-      /* .bgcst{
-        background-image: url("./assets/confbg1.jpg");
+    /* .bgcst{
+      background-image: url("./assets/confbg1.jpg");
       } */
-    </style>
+      </style>
   </head>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+  </script>
+    
     <header class="App">
         <div class="flex flex-col lg:flex-row items-center justify-between my-4 px-4 gap-5">
           <img alt="dpulogo" class="h-11 w-33 lg:h-16 lg:w-48" src="./assets/dpul.png" />
@@ -105,12 +124,13 @@
     </div>
 
     <div>
-      <div class="text-lg px-4 text-center lg:px-11">
-        <strong> About<span class="text-red-600"> Institute</span></strong>
-      </div>
+      <!-- <div class="text-lg px-4 text-center lg:px-11">
+        <strong>About Institute</strong>
+      </div> -->
 
-      <div class="px-8 lg:px-28 py-4 ">
-        <div>
+      <div class="w-100% flex flex-row items-start justify-evenly mx-6  py-4 ">
+        <div data-aos="zoom-in" data-aos-duration="1200" class="w-[55%] bggrad px-6 rounded ">
+          <h1 class="text-red-900 text-center font-semibold text-2xl border-b border-red-500 py-4 mb-4 gradient-text">About Institute</h1>
           <p>
             Welcome to Dr. D. Y. Patil Institute of Technology (DIT), Pimpri,
             Pune. The oldest campus of Dr. D. Y. Patil group of Institutions.
@@ -175,7 +195,7 @@
             as many university rankers are being produced by the Institute.
           </p>
           <br />
-          <p>
+          <!-- <p>
             To viaduct the gaps in academia, Institute has collaborations with
             industries and organizations at national and international level. To
             accomplish holistic development of the students, the Institute has
@@ -190,20 +210,15 @@
             institute has strong tie up with Industries for Internship. The
             institute has an ecosystem for inculcating a tradition of innovation
             driven entrepreneurship in faculty and students.
-          </p>
+          </p> -->
         </div>
+        <video data-aos="zoom-in" data-aos-duration="1200" class="w-[35%] rounded border border-red-500" controls loop autoplay muted>
+          <source src="./assets/WhatsApp Video 2024-08-08 at 18.05.mp4" type="video/mp4">
+        </video>
       </div>
-
-      <div class="text-lg text-center px-4 pt-4 lg:px-11">
-        <strong>
-          About Department of<span class="text-red-600">
-            Computer Engineering</span
-          ></strong
-        >
-      </div>
-
-      <div class="px-8 lg:px-28 py-4">
-        <div>
+      <div class="w-100% flex flex-row items-start justify-evenly mx-6  py-4 ">
+        <div data-aos="zoom-in" data-aos-duration="1200" class="w-[45%] bggrad px-6 rounded ">
+          <h1 class="text-red-900 text-center font-semibold text-2xl border-b border-red-500 py-4 mb-4 gradient-text">About Department</h1>
           <p>
             The Department of Computer Engineering at Dr. D.Y. Patil Institute
             of Technology, Pimpri, Pune, established in 1998, has a
@@ -236,55 +251,51 @@
             >.
           </p>
           <br />
+         
         </div>
-      </div>
-      <div class="text-lg text-center px-4 lg:px-11">
-        <strong> About<span class="text-red-600"> Conference</span></strong>
-      </div>
-      <div class="px-8 lg:px-28 py-4">
-        <div>
+        <div data-aos="zoom-in" data-aos-duration="1200" class="w-[45%] bggrad px-6 rounded ">
+          <h1 class="text-red-900 text-center font-semibold text-2xl border-b border-red-500 py-4 mb-4 gradient-text">About Conference</h1>
           <p>
-            A standout feature of<strong>ICNGC2K25</strong> is its collaboration
-            with renowned publication houses to ensure high-quality
-            dissemination of research. Selected papers from the conference will
-            be considered for publication in
-            <strong>Q1/Q2 journals from Taylor & Francis</strong> , offering
-            significant academic recognition and visibility. Additionally, the
-            conference will include<strong
-              >SCOPUS-indexed book chapter series with Taylor & Francis CRC
-              Press, IGI Global, and Router CRC Press</strong
-            >
-            , highlighting the conference's dedication to academic rigor and its
-            impact on the global research community.
+            The Department of Computer Engineering at Dr. D.Y. Patil Institute
+            of Technology, Pimpri, Pune, established in 1998, has a
+            long-standing commitment to excellence in education and research.
+            Offering<strong>
+              undergraduate (UG), postgraduate (PG), and doctoral (Ph.D.)
+              programs</strong
+            >, the department provides comprehensive education that blends
+            theoretical knowledge with practical skills, preparing students for
+            successful careers in academia, industry, and research.
           </p>
           <br />
           <p>
-            <strong>ICNGC2K25</strong> aims to provide a dynamic platform for
-            participants to engage in keynote speeches, technical sessions,
-            panel discussions, and workshops, fostering a rich exchange of ideas
-            and knowledge. This event underscores the Department's commitment to
-            advancing the field of computer engineering and promoting a culture
-            of research and innovation.
-          </p>
-          <br />
-          <p>
+            In line with its mission to foster innovation and collaboration, the
+            Department is organizing the
             <strong
-              >The International Conference on Next Generation Computing
-              (ICNGC2K25)</strong
+              >"International Conference on Next Generation Computing
+              (ICNGC2K25)"</strong
             >
-            is set to be a landmark event, bringing together a diverse group of
-            experts and enthusiasts to drive forward the boundaries of computing
-            research. It represents the Department of Computer Engineering's
-            ongoing efforts to contribute to the global knowledge base and
-            support the development of next-generation computing technologies.
-            As the department continues to build on its legacy of
-            excellence,<strong>ICNGC2K25</strong> will play a pivotal role in
-            shaping the future of computing research and innovation.
+            during the first week of February 2025. This prestigious event is
+            designed to serve as an international forum for researchers,
+            academicians, industry experts, and students to present their latest
+            research findings, share insights, and discuss the future trends in
+            computing technologies. The conference will cover a broad spectrum
+            of topics, including but not limited to
+            <strong>
+              artificial intelligence, machine learning, data science,
+              cybersecurity, cloud computing, and the Internet of Things
+              (IoT)</strong
+            >.
           </p>
           <br />
+         
         </div>
+
       </div>
-    </div>
+
+      
+      
+
+     
 
     <script>
         function toggleMenu() {
