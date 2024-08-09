@@ -36,11 +36,7 @@
         
 
       }
-      .bggrad h1{
-        /* margin: 12px 0 0 0; */
-        font-size: 18px;
-        border-bottom: 1px solid rgb(248, 142, 142);
-      }
+      
       .checkbtn {
       font-size: 30px;
       color: rgb(101, 92, 92);
@@ -52,6 +48,13 @@
       display: none;
       
     }
+    .gradient-text {
+  background: linear-gradient(to right, #f40b1a 0%, #221393 75%,#f40b1a 100%);
+  /* background: linear-gradient(to right, #f40b1a 0%, #221393 100%); */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
     </style>
   </head>
   <body>
@@ -118,13 +121,14 @@
       </div>
     <div class="mt-8 bgcst3 flex flex-col justify-center items-center w-full">
         <div class="my-16 rounded bggrad w-[85%] lg:w-2/5 flex flex-col justify-center items-center">
-            <div class="w-full p-4 lg:p-6">
-                <h1 class="text-6xl text-center font-semibold py-6">Important Dates</h1>
-            <h1 class="mt-4"><b>Conference Date : </b>date</h1>
-            <h1><b>Deadline for Paper Submission : </b>date</h1>
-            <h1><b>Acceptance Intimation : </b>date</h1>
-            <h1><b>Registration & Camera-ready paper submission : </b>date</h1>
-            <h1><b>Early Bird Registration : </b>date</h1>
+            <div class="w-full p-4">
+                <h1 class="text-3xl gradient-text text-center font-semibold pt-4 pb-6 border-b border-red-500">Important Dates</h1>
+            <h1 class="py-3 text-xl border-b border-red-500"><b class="font-semibold">Conference Date : </b>2nd week of Feb 2025</h1>
+            <h1 class="py-3 text-xl border-b border-red-500"><b class="font-semibold">Deadline for Paper Submission : </b>First week of Sept. 24
+            </h1>
+            <h1 class="py-3 text-xl border-b border-red-500"><b class="font-semibold">Acceptance Intimation : </b>Last week of oct 24</h1>
+            <h1 class="py-3 text-xl border-b border-red-500"><b class="font-semibold">Registration & Camera-ready paper submission : </b>Nov 24</h1>
+            <h1 class="py-3 text-xl border-b border-red-500"><b class="font-semibold">Early Bird Registration : </b>4500/-</h1>
             </div>
         </div>
     </div>
