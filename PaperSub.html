@@ -13,6 +13,31 @@
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
+      .bggrad {
+        background-image: linear-gradient(to right, #ffd1e3 0%, #d1d1ff 100%);
+      }
+      .bggrad1 {
+        background-image: linear-gradient(to right, #ffd1e3 0%, #d1d1ff 100%);
+      }
+      
+      .bgcst3{
+        background-image: url("./assets/Untitled\ design\ \(17\).png");
+        /* opacity: 0.7; */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        margin: 20px 8px;
+        border-radius: 8px;
+      }
+      .gradient-text {
+  background: linear-gradient(to right, #f40b1a 0%, #221393 100%);
+  /* background: linear-gradient(to right, #f40b1a 0%, #221393 100%); */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+  font-weight: 400px;
+}
       .head {
         background-image: url("./confimg.jpg");
         background-size: cover; /* Ensures the image covers the entire area */
@@ -47,7 +72,7 @@
       cursor: pointer;
       text-align: center;
     }
-
+    
     #check {
       display: none;
       
@@ -60,8 +85,14 @@
         border-bottom: 1px solid #000000;
       } */
     </style>
+                <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <header class="App">
       <div class="flex flex-col lg:flex-row items-center justify-between my-4 px-4 gap-5">
         <img alt="dpulogo" class="h-11 w-33 lg:h-16 lg:w-48" src="./assets/dpul.png" />
@@ -122,45 +153,43 @@
       <h1 class="text-4xl text-center text-white">Paper Submission</h1>
     </div>
 
-    <div class="text-lg px-4 lg:px-11 pt-7">
-      <strong>Instructions:</strong>
-    </div>
+    <section id="about" class="flex flex-col items-center justify-center bgcst3 about py-12">
+      <div data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" class="bggrad rounded py-4 w-[90%] md:w-2/5 my-4">
+        <a target="_blank" class="  flex flex-row justify-center" href="https://easychair.org/account2/signin_timeout?l=2721218034701561964"><p class="text-[26px] font-semibold gradient-text">SUBMIT PAPER</p></a>
+      </div>
+      <div data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" class="bggrad1 w-[90%] md:w-2/5 rounded p-4 flex flex-col items-center">
+        <h1 class="w-full text-center text-[26px] font-semibold gradient-text pb-2 border-b border-red-500">Instructions</h1>
+        <p class="py-4 border-b border-red-500">
+          Research Papers should be submitted through easychair login only. The
+            link for the same is given in the adjacent paper submission button
+          </p>
+          <p class="py-4 border-b border-red-500">
+          The research paper should be original and unpublished work with less
+            10% plagiarism. Plagiarized work would lead to disqualification
+          </p>
+          <p class="py-4 border-b border-red-500">
+        The full paper should be submitted along with all the authors and
+            their affiliation
+          </p>
+          <p class="py-4 border-b border-red-500">
+           All the submitted papers for ICNGC-2K24 will undergo the peer review
+            process
+          </p>
+          <p class="py-4 border-b border-red-500">
+          All accepted, registered, and presented quality papers will be
+            submitted to T & F CRC Press & IGI Global SCOPUS index book preceding
+            and selected paper will process in SCOPUS Index<strong> Taylor and Francis
+            Special issue of Q1/Q2 Journal</strong>  Publication.
+          </p>
+          <p class="py-4 border-b border-red-500">
+           No further addition/changes of author name is possible after the final
+            selection of the paper
+          </p>
+      </div>
+</section>
 
-    <div>
-      <ul class="px-8 lg:px-24 py-7 space-y-4">
-        <li>
-        ● Research Papers should be submitted through easychair login only. The
-          link for the same is given in the adjacent paper submission button
-        </li>
-        <li>
-        ● The research paper should be original and unpublished work with less
-          10% plagiarism. Plagiarized work would lead to disqualification
-        </li>
-        <li>
-        ● The full paper should be submitted along with all the authors and
-          their affiliation
-        </li>
-        <li>
-        ● All the submitted papers for ICNGC-2K24 will undergo the peer review
-          process
-        </li>
-        <li class="inline-block">
-        ● All accepted, registered, and presented quality papers will be
-          submitted to T & F CRC Press & IGI Global SCOPUS index book preceding
-          and selected paper will process in SCOPUS Index<strong> Taylor and Francis
-          Special issue of Q1/Q2 Journal</strong>  Publication.
-        </li>
-        <li>
-        ● No further addition/changes of author name is possible after the final
-          selection of the paper
-        </li>
-      </ul>
-    </div>
-    <div>
-        
-      <a target="_blank" href="https://easychair.org/account2/signin_timeout?l=2721218034701561964" class="text-lg underline text-red-700 justify-center flex flex-col pb-8 "><strong class="text-center">Log in to EasyChair for ICNGC-2K25</strong></a>
-  
-  </div>
+
+
 
   <script>
     function toggleMenu() {

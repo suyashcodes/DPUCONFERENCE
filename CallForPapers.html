@@ -42,10 +42,33 @@
       display: none;
       
     }
-      
+    .bgcst3{
+        background-image: url("./assets/Untitled\ design\ \(17\).png");
+        /* opacity: 0.7; */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        margin: 20px 8px;
+        border-radius: 8px;
+      }
+      .gradient-text {
+  background: linear-gradient(to right, #f40b1a 0%, #221393 75%,#f40b1a 100%);
+  /* background: linear-gradient(to right, #f40b1a 0%, #221393 100%); */
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 20px;
+  font-weight: 400px;
+}
     </style>
+            <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <header class="App">
       <div class="flex flex-col lg:flex-row items-center justify-between my-4 px-4 gap-5">
         <img alt="dpulogo" class="h-11 w-33 lg:h-16 lg:w-48" src="./assets/dpul.png" />
@@ -107,16 +130,16 @@
     <div class="bgcst h-24 flex flex-col rounded mx-2 justify-center">
       <h1 class="text-4xl text-center text-white">Call For Papers</h1>
     </div>
-    <section id="about" class="about">
+    <section id="about" class=" bgcst3 about py-12">
         <div class="container mx-auto">
-          <div class="flex flex-wrap justify-between">
-            <div class="w-full md:w-1/5 p-4">
+          <div class="flex flex-wrap justify-evenly">
+            <div class="w-full md:w-2/5 p-4">
               <div class="accordion-item">
-                <div class="flex flex-row bgcst2 items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
-                  <h2 class="accordion-button font-bold flex-grow">Track 1: Data Science and Big Data Analytics</h2>
-                  <i class="fa fa-arrow-up text-[22px]"></i>
+                <div data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" class="flex flex-row bggrad items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
+                  <h2 class="accordion-button gradient-text font-bold flex-grow">Track 1: Data Science and Big Data Analytics</h2>
+                  <i class="gradient-text fa fa-arrow-up text-[22px]"></i>
                 </div>
-                <div class="accordion-content bggrad mt-4 rounded">
+                <div data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" class="accordion-content bggrad mt-4 rounded">
                   <div class="">
                     <p class="p-3 border-b border-red-500">Data Analysis and Visualization</p>
                     <p class="p-3 border-b border-red-500">Machine Learning and Predictive Analytics</p>
@@ -131,13 +154,13 @@
             </div>
             <!-- Add more accordion items here as needed -->
 
-            <div class="w-full md:w-1/5 p-4">
+            <div class="w-full md:w-2/5 p-4">
                 <div class="accordion-item">
-                  <div class="flex flex-row bgcst2 items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
-                    <h2 class="accordion-button font-bold flex-grow">Track 2: Cyber Security and Privacy</h2>
-                    <i class="fa fa-arrow-up text-[22px]"></i>
+                  <div data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" class="flex flex-row bggrad items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
+                    <h2 class="gradient-text accordion-button gradient-text font-bold flex-grow">Track 2: Cyber Security and Privacy</h2>
+                    <i class="gradient-text gradient-text fa fa-arrow-up text-[22px]"></i>
                   </div>
-                  <div class="accordion-content bggrad mt-4 rounded">
+                  <div data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" class="accordion-content bggrad mt-4 rounded">
                     <div class="">
                       <p class="p-3 border-b border-red-500">Network Security</p>
                       <p class="p-3 border-b border-red-500">Cryptography and Data Protection</p>
@@ -151,13 +174,13 @@
                 </div>
               </div>
     
-              <div class="w-full md:w-1/5 p-4">
+              <div class="w-full md:w-2/5 p-4">
                 <div class="accordion-item">
-                  <div class="flex flex-row bgcst2 items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
-                    <h2 class="accordion-button font-bold flex-grow">Track 3: Software Engineering and Quality</h2>
-                    <i class="fa fa-arrow-up text-[22px]"></i>
+                  <div data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" class="flex flex-row bggrad items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
+                    <h2 class="accordion-button gradient-text font-bold flex-grow">Track 3: Software Engineering and Quality</h2>
+                    <i class="gradient-text fa fa-arrow-up text-[22px]"></i>
                   </div>
-                  <div class="accordion-content bggrad mt-4 rounded">
+                  <div data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" class="accordion-content bggrad mt-4 rounded">
                     <div class="">
                       <p class="p-3 border-b border-red-500">Software Development Methodologies</p>
                       <p class="p-3 border-b border-red-500">Agile and DevOps Practices</p>
@@ -171,13 +194,13 @@
                 </div>
               </div>
     
-              <div class="w-full md:w-1/5 p-4">
+              <div class="w-full md:w-2/5 p-4">
                 <div class="accordion-item">
-                  <div class="flex flex-row bgcst2 items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
-                    <h2 class="accordion-button font-bold flex-grow">Track 4: Artificial Intelligence and Robotics</h2>
-                    <i class="fa fa-arrow-up text-[22px]"></i>
+                  <div data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" class="flex flex-row bggrad items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
+                    <h2 class="accordion-button gradient-text font-bold flex-grow">Track 4: Artificial Intelligence and Robotics</h2>
+                    <i class="gradient-text fa fa-arrow-up text-[22px]"></i>
                   </div>
-                  <div class="accordion-content bggrad mt-4 rounded">
+                  <div data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" class="accordion-content bggrad mt-4 rounded">
                     <div class="">
                       <p class="p-3 border-b border-red-500">Robotics and Automation</p>
                       <p class="p-3 border-b border-red-500">Computer Vision</p>
@@ -191,13 +214,13 @@
                 </div>
               </div>
     
-              <div class="w-full md:w-1/5 p-4">
+              <div class="w-full md:w-2/5 p-4">
                 <div class="accordion-item">
-                  <div class="flex flex-row bgcst2 items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
-                    <h2 class="accordion-button font-bold flex-grow">Track 5: Cloud Computing and Virtualization</h2>
-                    <i class="fa fa-arrow-up text-[22px]"></i>
+                  <div data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" class="flex flex-row bggrad items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
+                    <h2 class="accordion-button gradient-text font-bold flex-grow">Track 5: Cloud Computing and Virtualization</h2>
+                    <i class="gradient-text fa fa-arrow-up text-[22px]"></i>
                   </div>
-                  <div class="accordion-content bggrad mt-4 rounded">
+                  <div data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" class="accordion-content bggrad mt-4 rounded">
                     <div class="">
                       <p class="p-3 border-b border-red-500">Cloud Architecture</p>
                       <p class="p-3 border-b border-red-500">Virtualization Technologies</p>
@@ -211,13 +234,13 @@
                 </div>
               </div>
     
-              <div class="w-full md:w-1/5 p-4">
+              <div class="w-full md:w-2/5 p-4">
                 <div class="accordion-item">
-                  <div class="flex flex-row bgcst2 items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
-                    <h2 class="accordion-button font-bold flex-grow">Track 6: Internet of Things (IoT)</h2>
-                    <i class="fa fa-arrow-up text-[22px]"></i>
+                  <div data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" class="flex flex-row bggrad items-center p-3 rounded text-white cursor-pointer" onclick="toggleAccordion(this)">
+                    <h2 class="accordion-button gradient-text font-bold flex-grow">Track 6: Internet of Things (IoT)</h2>
+                    <i class="gradient-text fa fa-arrow-up text-[22px]"></i>
                   </div>
-                  <div class="accordion-content bggrad mt-4 rounded">
+                  <div data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" class="accordion-content bggrad mt-4 rounded">
                     <div class="">
                       <p class="p-3 border-b border-red-500">IoT Architecture and Protocols</p>
                       <p class="p-3 border-b border-red-500">IoT Applications</p>

@@ -30,9 +30,13 @@
       }
       .bgcst3{
         background-image: url("./assets/Untitled\ design\ \(17\).png");
+        /* opacity: 0.7; */
         background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: cover; /* Resize the background image to cover the entire container */
+        /* margin: 20px 20px; */
+
+        border-radius: 8px;
         
 
       }
@@ -56,8 +60,14 @@
   -webkit-text-fill-color: transparent;
 }
     </style>
+                <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
   </head>
   <body>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
     <header class="App">
       <div class="flex flex-col lg:flex-row items-center justify-between my-4 px-4 gap-5">
         <img alt="dpulogo" class="h-11 w-33 lg:h-16 lg:w-48" src="./assets/dpul.png" />
@@ -120,7 +130,7 @@
         <h1 class=" text-4xl text-center text-white">Important Dates</h1>
       </div>
     <div class="mt-8 bgcst3 flex flex-col justify-center items-center w-full">
-        <div class="my-16 rounded bggrad w-[85%] lg:w-2/5 flex flex-col justify-center items-center">
+        <div data-aos="fade-up" data-aos-duration="1200" data-aos-easing="ease-in-out" class="my-16 rounded bggrad w-[85%] lg:w-2/5 flex flex-col justify-center items-center">
             <div class="w-full p-4">
                 <h1 class="text-3xl gradient-text text-center font-semibold pt-4 pb-6 border-b border-red-500">Important Dates</h1>
             <h1 class="py-3 text-xl border-b border-red-500"><b class="font-semibold">Conference Date : </b>2nd week of Feb 2025</h1>
