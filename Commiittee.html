@@ -1,34 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Committee</title>
     <!-- <link href="output.css" rel="stylesheet" /> -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
     <style>
-      .head {
-        background-image: url("./confimg.jpg");
-        background-size: cover; /* Ensures the image covers the entire area */
-        background-position: center; /* Centers the image */
-        background-repeat: no-repeat; /* Prevents the image from repeating */
-        width: 100%;
-        height: 100%;
-      }
-      .bgcst {
-        background-image: linear-gradient(to right, #f40b1a 0%, #221393 100%);
-      }
-      .bgcst2 {
-        background-image: linear-gradient(to right, #670524 0%, #134d93 100%);
-      }
-      /* table,
+        .head {
+            background-image: url("./confimg.jpg");
+            background-size: cover;
+            /* Ensures the image covers the entire area */
+            background-position: center;
+            /* Centers the image */
+            background-repeat: no-repeat;
+            /* Prevents the image from repeating */
+            width: 100%;
+            height: 100%;
+        }
+
+        .bgcst {
+            background-image: linear-gradient(to right, #f40b1a 0%, #221393 100%);
+        }
+
+        .bgcst2 {
+            background-image: linear-gradient(to right, #670524 0%, #134d93 100%);
+        }
+
+        /* table,
       thead {
        border-collapse: collapse;
         border: 1px solid #000000;
@@ -43,555 +47,778 @@
         padding: 8px;
         } */
         .tab {
-          /* border-radius: 10px; */
-          /* border: 1px solid #000000; */
-          border-radius: 12px;
-          max-width: 700px;
-          
-          background-image: linear-gradient(to right, #ffd1e3 0%, #d1d1ff 100%);
-        align-items: center;
-        display: flex;
-        justify-content: center;
-      }
-      .tdef {
-        width: 50%;
-        text-align: center;
-        border: 1px solid #000000;
-      }
-      .thed {
-        border-radius: 10px;
-      }
-      li {
-        padding-bottom: 5px;
-        padding-left: 8px;
-        padding-right: 8px;
-        margin-bottom: 5px;
-        border-bottom: 1px solid #000000;
-      }
-      td,th{
-        padding: 8px;
-      }
-      .checkbtn {
-      font-size: 30px;
-      color: rgb(101, 92, 92);
-      cursor: pointer;
-      text-align: center;
-    }
+            /* border-radius: 10px; */
+            /* border: 1px solid #000000; */
+            border-radius: 12px;
+            max-width: 700px;
 
-    #check {
-      display: none;
-      
-    }
+            background-image: linear-gradient(to right, #ffd1e3 0%, #d1d1ff 100%);
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
 
-    .bggrad {
-        background-image: linear-gradient(to right, #fdedf3bc 0%, #e7e7f8be 100%);
-      }
+        .tdef {
+            width: 50%;
+            text-align: center;
+            border: 1px solid #000000;
+        }
 
-      .gradient-text {
-  background: linear-gradient(to right, #f40b1a 0%, #221393 100%);
-  /* background: linear-gradient(to right, #f40b1a 0%, #221393 100%); */
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-    
+        .thed {
+            border-radius: 10px;
+        }
+
+        li {
+            padding-bottom: 5px;
+            padding-left: 8px;
+            padding-right: 8px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #000000;
+        }
+
+        td,
+        th {
+            padding: 8px;
+        }
+
+        .checkbtn {
+            font-size: 30px;
+            color: rgb(101, 92, 92);
+            cursor: pointer;
+            text-align: center;
+        }
+
+        #check {
+            display: none;
+
+        }
+
+        .bggrad {
+            background-image: linear-gradient(to right, #fdedf3bc 0%, #e7e7f8be 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(to right, #f40b1a 0%, #221393 100%);
+            /* background: linear-gradient(to right, #f40b1a 0%, #221393 100%); */
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
-  </head>
-  <body>
+</head>
+
+<body>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
     <header class="App">
-      <div class="flex flex-col lg:flex-row items-center justify-between my-4 px-4 gap-5">
-        <img alt="dpulogo" class="h-11 w-33 lg:h-16 lg:w-48" src="./assets/dpul.png" />
-        <div class=" flex text-red-900 font-bold flex-col items-center text-center">
-          <h3 class="text-red-900 text-base">
-            Dr. D. Y. Patil Unitech Society
-          </h3>
-          <h1 class=" text-[1.4rem] font-bold ">
-            DR. D. Y. PATIL INSTITUTE OF TECHNOLOGY
-          </h1>
-          <h1 class="hidden lg:block text-sm font-thin">
-            (formerly Dr. D. Y. Patil Institute of Engineering and Technology)
-          </h1>
-          <h5 class="hidden lg:block text-sm font-thin">
-            Main Campus, Sant Tukaram Nagar, Pimpri, Pune.
-          </h5>
-          <h1 class="hidden lg:block text-base font-semibold">
-            Permanently Affiliated to the Savitribai Phule Pune University.
-            Approved by AICTE New Delhi and DTE Maharashtra.
-          </h1>
-          <h1 class=" text-base font-semibold">
-            Accredited by NAAC with a CGPA of 3.74 on a four point scale at A++
-            Grade
-          </h1>
-          <h1 class="text-base font-bold ">
-            Department Of Computer Engineering
-          </h1>
+        <div class="flex flex-col lg:flex-row items-center justify-between my-4 px-4 gap-5">
+            <img alt="dpulogo" class="h-11 w-33 lg:h-16 lg:w-48" src="./assets/dpul.png" />
+            <div class=" flex text-red-900 font-bold flex-col items-center text-center">
+                <h3 class="text-red-900 text-base">
+                    Dr. D. Y. Patil Unitech Society
+                </h3>
+                <h1 class=" text-[1.4rem] font-bold ">
+                    DR. D. Y. PATIL INSTITUTE OF TECHNOLOGY
+                </h1>
+                <h1 class="hidden lg:block text-sm font-thin">
+                    (formerly Dr. D. Y. Patil Institute of Engineering and Technology)
+                </h1>
+                <h5 class="hidden lg:block text-sm font-thin">
+                    Main Campus, Sant Tukaram Nagar, Pimpri, Pune.
+                </h5>
+                <h1 class="hidden lg:block text-base font-semibold">
+                    Permanently Affiliated to the Savitribai Phule Pune University.
+                    Approved by AICTE New Delhi and DTE Maharashtra.
+                </h1>
+                <h1 class=" text-base font-semibold">
+                    Accredited by NAAC with a CGPA of 3.74 on a four point scale at A++
+                    Grade
+                </h1>
+                <h1 class="text-base font-bold ">
+                    Department Of Computer Engineering
+                </h1>
+            </div>
+            <div class="flex sm:flex-row lg:flex-col items-start justify-center gap-3">
+                <img alt="dpulogo" class="h-16 w-40 lg:w-48 border rounded-md border-red-600 p-1"
+                    src="./assets/logo1.jpeg" />
+                <img alt="dpulogo" class="h-16 w-40 lg:w-48 border rounded-md border-red-600 p-1"
+                    src="./assets/logo2.jpeg" />
+            </div>
         </div>
-        <div class="flex sm:flex-row lg:flex-col items-start justify-center gap-3">
-          <img alt="dpulogo" class="h-16 w-40 lg:w-48 border rounded-md border-red-600 p-1" src="./assets/logo1.jpeg" />
-          <img alt="dpulogo" class="h-16 w-40 lg:w-48 border rounded-md border-red-600 p-1" src="./assets/logo2.jpeg" />
-        </div>
-      </div>
     </header>
-  
-    
+
+
     <div class="  border-y-2 border-red-600 my-6 px-2 text-base ">
-      <div class="flex my-2">
-        <input type="checkbox" id="check" class="lg:hidden sm:block">
-        <label for="check" class="checkbtn lg:hidden sm:flex w-[100vh] sm:mt-52">
-          <i onclick="toggleMenu()" class="fas fa-bars text-center"></i>
-        </label>
-    </div>
-      
-    <div id="menu" class="hidden lg:flex flex-col lg:gap-0 gap-2 items-center sticky w-full lg:flex-row lg:justify-between justify-center lg:my-2 px-2 text-[20px] lg:text-[18px] lg:font-medium ">
-      <div class="lg:hover:bg-gradient-to-br hover:from-[#f40b1a] hover:to-[#221393] lg:hover:text-white lg:py-2 lg:px-3 lg:rounded-md"><a href="./index.html" class="">Home</a></div>
-      <div class="lg:hover:bg-gradient-to-br hover:from-[#f40b1a] hover:to-[#221393] lg:hover:text-white lg:py-2 lg:px-3 lg:rounded-md"><a href="./About.html" class="">About Us</a></div>
-      <div class="lg:hover:bg-gradient-to-br hover:from-[#f40b1a] hover:to-[#221393] lg:hover:text-white lg:py-2 lg:px-3 lg:rounded-md"><a href="./CallForPapers.html" class="">Call For Papers</a></div>
-      <div class="lg:hover:bg-gradient-to-br hover:from-[#f40b1a] hover:to-[#221393] lg:hover:text-white lg:py-2 lg:px-3 lg:rounded-md"><a href="./ImportantDates.html" class="">Important Dates</a></div>
-      <div class="lg:hover:bg-gradient-to-br hover:from-[#f40b1a] hover:to-[#221393] lg:hover:text-white lg:py-2 lg:px-3 lg:rounded-md"><a href="./PaperSub.html" class="">Paper Submission</a></div>
-      <div class="lg:hover:bg-gradient-to-br hover:from-[#f40b1a] hover:to-[#221393] lg:hover:text-white lg:py-2 lg:px-3 lg:rounded-md"><a href="./PaperReg.html" class="">Paper Registration</a></div>
-      <div class="bg-gradient-to-br from-[#f40b1a] to-[#221393] text-white py-2 px-3 rounded-md"><a href="./Commiittee.html" class="">Committee</a></div>
-      <div class="lg:hover:bg-gradient-to-br hover:from-[#f40b1a] hover:to-[#221393] lg:hover:text-white lg:py-2 lg:px-3 lg:rounded-md"><a href="./Contact.html" class="">Contact Us</a></div>
-      </div>
+        <div class="flex my-2">
+            <input type="checkbox" id="check" class="lg:hidden sm:block">
+            <label for="check" class="checkbtn lg:hidden sm:flex w-[100vh] sm:mt-52">
+                <i onclick="toggleMenu()" class="fas fa-bars text-center"></i>
+            </label>
+        </div>
+
+        <div id="menu"
+            class="hidden lg:flex flex-col lg:gap-0 gap-2 items-center sticky w-full lg:flex-row lg:justify-between justify-center lg:my-2 px-2 text-[20px] lg:text-[18px] lg:font-medium ">
+            <div
+                class="lg:hover:bg-gradient-to-br hover:from-[#f40b1a] hover:to-[#221393] lg:hover:text-white lg:py-2 lg:px-3 lg:rounded-md">
+                <a href="./index.html" class="">Home</a>
+            </div>
+            <div
+                class="lg:hover:bg-gradient-to-br hover:from-[#f40b1a] hover:to-[#221393] lg:hover:text-white lg:py-2 lg:px-3 lg:rounded-md">
+                <a href="./About.html" class="">About Us</a>
+            </div>
+            <div
+                class="lg:hover:bg-gradient-to-br hover:from-[#f40b1a] hover:to-[#221393] lg:hover:text-white lg:py-2 lg:px-3 lg:rounded-md">
+                <a href="./CallForPapers.html" class="">Call For Papers</a>
+            </div>
+            <div
+                class="lg:hover:bg-gradient-to-br hover:from-[#f40b1a] hover:to-[#221393] lg:hover:text-white lg:py-2 lg:px-3 lg:rounded-md">
+                <a href="./ImportantDates.html" class="">Important Dates</a>
+            </div>
+            <div
+                class="lg:hover:bg-gradient-to-br hover:from-[#f40b1a] hover:to-[#221393] lg:hover:text-white lg:py-2 lg:px-3 lg:rounded-md">
+                <a href="./PaperSub.html" class="">Paper Submission</a>
+            </div>
+            <div
+                class="lg:hover:bg-gradient-to-br hover:from-[#f40b1a] hover:to-[#221393] lg:hover:text-white lg:py-2 lg:px-3 lg:rounded-md">
+                <a href="./PaperReg.html" class="">Paper Registration</a>
+            </div>
+            <div class="bg-gradient-to-br from-[#f40b1a] to-[#221393] text-white py-2 px-3 rounded-md"><a
+                    href="./Commiittee.html" class="">Committee</a></div>
+            <div
+                class="lg:hover:bg-gradient-to-br hover:from-[#f40b1a] hover:to-[#221393] lg:hover:text-white lg:py-2 lg:px-3 lg:rounded-md">
+                <a href="./Contact.html" class="">Contact Us</a>
+            </div>
+        </div>
     </div>
 
     <!-- Cheif -->
     <!-- Cheif -->
     <div class="bgcst h-24 flex flex-col rounded mx-2 mt-4 justify-center">
-      <h1 class="text-4xl text-center text-white">Commiittee</h1>
+        <h1 class="text-4xl text-center text-white">Commiittee</h1>
     </div>
-    
 
-        <div class="bggrad border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
 
-          <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">CHIEF PATRON</h1>
+    <div class="bggrad border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
 
-        <div class="flex flex-col lg:flex-row items-center lg:items-start justify-between lg:justify-center flex-wrap w-full">
-          <div class=" my-10 flex flex-col items-center justify-center w-[85%] lg:w-[33%]">
-            <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/pdpatilsir.jpg" alt="sonathpatilsir">
-            <div class=" my-4 flex flex-col items-center justify-center">
-              <h1  data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">Hon'ble Dr. P. D. Patil</h1>
-              <h1  data-aos="fade-up" class="text-center text-lg">Chairman, Dr. D. Y. Patil Unitech Society, Pune </h1> 
-                <h1  data-aos="fade-up" class="text-center text-lg">Chancellor, Dr. D. Y. Patil Vidyapeeth, Pune.</h1>
+        <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">CHIEF PATRON</h1>
+
+        <div
+            class="flex flex-col lg:flex-row items-center lg:items-start justify-between lg:justify-center flex-wrap w-full">
+            <div class=" my-10 flex flex-col items-center justify-center w-[85%] lg:w-[33%]">
+                <img data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/pdpatilsir.jpg" alt="sonathpatilsir">
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">
+                        Hon'ble Dr. P. D. Patil</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Chairman, Dr. D. Y. Patil Unitech Society, Pune
+                    </h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Chancellor, Dr. D. Y. Patil Vidyapeeth, Pune.
+                    </h1>
+                </div>
             </div>
-          </div>
 
 
-          <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[33%]"  >
-            <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/bhagyashreemam.png" alt="sonathpatilsir">
-            <div class=" my-4 flex flex-col items-center justify-center">
-              <h1  data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">Hon'ble Dr.(Mrs) Bhagyashree P. Patil
-              </h1>
-              <h1  data-aos="fade-up" class="text-center text-lg">Vice Chairperson, Dr. D.Y. PatilUnitech Society, Pune</h1> 
-                <h1  data-aos="fade-up" class="text-center text-lg">Pro-Chancellor, Dr. D.Y. PatilVidyapeeth, Pune
-                </h1>
-                <h1  data-aos="fade-up" class="text-center text-lg">(Deemed to be University)
-                </h1>
+            <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[33%]">
+                <img data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/bhagyashreemam.png"
+                    alt="sonathpatilsir">
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">
+                        Hon'ble Dr.(Mrs) Bhagyashree P. Patil
+                    </h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Vice Chairperson, Dr. D.Y. PatilUnitech Society,
+                        Pune</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Pro-Chancellor, Dr. D.Y. PatilVidyapeeth, Pune
+                    </h1>
+                    <h1 data-aos="fade-up" class=" text-lg">(Deemed to be University)
+                    </h1>
+                </div>
             </div>
-          </div>
 
 
-          <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[33%]" >
-            <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/somnathpatilsir.jpg" alt="sonathpatilsir">
-            <div class=" my-4 flex flex-col items-center justify-center">
-              <h1  data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">Hon'ble Dr. Somnath P. Patil
-              </h1>
-              <h  data-aos="fade-up" class="text-center text-lg">Secretary </br>Dr. D. Y. PatilUnitech Society, Pune </h1> 
+            <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[33%]">
+                <img data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/somnathpatilsir.jpg"
+                    alt="sonathpatilsir">
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">
+                        Hon'ble Dr. Somnath P. Patil
+                    </h1>
+                    <h data-aos="fade-up" class="text-center text-lg">Secretary </br>Dr. D. Y. PatilUnitech Society,
+                        Pune </h1>
+                </div>
             </div>
-          </div>
 
-          <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[33%]" >
-            <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/RohiniPatil.jpeg" alt="sonathpatilsir">
-            <div class=" my-4 flex flex-col items-center justify-center">
-              <h1  data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">Hon'ble Dr. Rohini Patil
-              </h1>
-              <h1  data-aos="fade-up" class="text-center text-lg">
-                Executive Director </br>
-                Dr. D. Y. Patil Public School</h1> 
+            <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[33%]">
+                <img data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/RohiniPatil.jpeg"
+                    alt="sonathpatilsir">
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">
+                        Hon'ble Dr. Rohini Patil
+                    </h1>
+                    <h1 data-aos="fade-up" class=" text-lg">
+                        Executive Director </br>
+                        Dr. D. Y. Patil Public School</h1>
+                </div>
             </div>
-          </div>
-            
+
 
         </div>
-      </div>
+    </div>
 
 
-      
-        <div class="bggrad border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
 
-          <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">ADVISORY BOARD</h1>
+    <div class="bggrad border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
 
-        <div class="flex flex-col lg:flex-row items-center lg:justify-evenly lg:items-start justify-between flex-wrap w-full" >
+        <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">ADVISORY BOARD</h1>
 
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. S. S. Chitlange</h1>
-              <h1 data-aos="fade-up" class="text-[16px]">CEO - Administration,
-                Dr. D. Y. PatilUnitechSociety,Pune</h1>
+        <div
+            class="flex flex-col lg:flex-row items-center lg:justify-evenly lg:items-start justify-between flex-wrap w-full">
+
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. S. S. Chitlange</h1>
+                    <h1 data-aos="fade-up" class="text-[16px]">CEO - Administration,
+                        Dr. D. Y. PatilUnitechSociety,Pune</h1>
+                </div>
             </div>
-          </div>
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. S. S. Chitlange</h1>
-              <h1 data-aos="fade-up" class="text-[16px]">CEO - Administration,
-                Dr. D. Y. PatilUnitechSociety,Pune</h1>
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. S. S. Chitlange</h1>
+                    <h1 data-aos="fade-up" class="text-[16px]">CEO - Administration,
+                        Dr. D. Y. PatilUnitechSociety,Pune</h1>
+                </div>
             </div>
-          </div>
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Prof.Dheeraj Agrawal</h1>
-              <h1 data-aos="fade-up" class="text-[16px]">Director, Central Corporate Relations, Alumni and Branding,
-                Dr. D. Y. Patil Unitech Society,Pune</h1>
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Prof.Dheeraj Agrawal</h1>
+                    <h1 data-aos="fade-up" class="text-[16px]">Director, Central Corporate Relations, Alumni and
+                        Branding,
+                        Dr. D. Y. Patil Unitech Society,Pune</h1>
+                </div>
             </div>
-          </div>
-          
-         
 
 
-         
-            
+
+
+
+
 
         </div>
-      </div>
-      
-      
-            <div class="bggrad border border-red-500 rounded m-8 flex flex-col items-center justify-center mb-12">
-              <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">ORGANIZING COMMITTEE</h1>
-              <div class="flex flex-row items-start justify-evenly flex-wrap w-full">
+    </div>
 
-                <!-- <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
+
+    <div class="bggrad border border-red-500 rounded m-8 flex lg:flex-row flex-wrap flex-col items-center lg:items-start justify-center mb-12">
+        <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">ORGANIZING COMMITTEE
+        </h1>
+            <!-- <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
                   <div class="pl-4 my-2 flex flex-col items-start justify-center">
                     <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Deepa Joshi</h1>
                     <h1 data-aos="fade-up" class="text-[16px]">Head, Civil Department</h1>
                   </div>
                 </div> -->
-                
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Rajesh Bharti.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Dr. Rajesh Bharati</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg"> Assistant Professor B.E.(CSE), M.Tech(CE)-COEP, Ph.D.(Pursuing)-COEP</h1>
-                  </div>
+
+            
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Rupesh Mahajan.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text"> Dr.
+                      Rajesh Bharati</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">M.Tech(CE)-COEP,
+                      Ph.D.(Pursuing)-COEP</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Rupesh Mahajan.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Dr. Rupesh Mahajan</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor Ph.D, ME (CSE/IT)</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Rupesh Mahajan.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Dr.
+                        Rupesh Mahajan</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor Ph.D, ME (CSE/IT)</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Dr. Swapnil Deshmukh</h1>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Rupesh Mahajan.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Dr.
+                        Rupesh Mahajan</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor Ph.D, ME (CSE/IT)</h1>
+                </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Dr.
+                        Swapnil Deshmukh</h1>
                     <!-- <h1  data-aos="fade-up" class="text-center text-lg">(HoD, Computer Engineering)</h1> -->
-                  </div>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/savitakumbhare.jpg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Dr. Savita Kumbhare</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor Ph.D.(Pursuing), ME - (Computer Networks)</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/savitakumbhare.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Dr.
+                        Savita Kumbhare</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor Ph.D.(Pursuing), ME -
+                        (Computer Networks)</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Digambar Jadhav.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mr. Digambar Jadhav</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor
-      
-                      ME Computer</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Digambar Jadhav.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mr.
+                        Digambar Jadhav</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor
+
+                        ME Computer</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Pooja Sakunde.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Ms. Pooja Sakunde</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor M.E(Computer Engineering)</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Pooja Sakunde.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Ms.
+                        Pooja Sakunde</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor M.E(Computer Engineering)
+                    </h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Chitralekha Diwedi.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Chitrlekha Dwivedi</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor Ph.D. pursuing, M.E. (COMPUTER SCIENCE)</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Chitralekha Diwedi.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Chitrlekha Dwivedi</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor Ph.D. pursuing, M.E.
+                        (COMPUTER SCIENCE)</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Vasudha-Profile.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Vasudha Phaltankar</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor
-      
-                      ME(CSE)</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Vasudha-Profile.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Vasudha Phaltankar</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor
+
+                        ME(CSE)</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Bharti Sahu.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Bharti Sahu</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor M.E.(E&TC)</h1>
-                  </div>
+            </div>
+        </div>
+     
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Dipika Jaiswal.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                      Bharti Sahu</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor M.E.(E&TC)</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Dipika Jaiswal.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Ms. Deepika Jaiswal</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor M.E. (Computer Engg.)</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Dipika Jaiswal.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Ms.
+                        Deepika Jaiswal</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor M.E. (Computer Engg.)</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Zarina Shaikh.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Zarina Shaikh</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor Ph.D. Pursuing in Computer Engineering</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Zarina Shaikh.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Zarina Shaikh</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor Ph.D. Pursuing in Computer
+                        Engineering</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Ashwini-Jadhav.jpg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Ashwini Jadhav</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor
-      
-                      M. E.</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Ashwini-Jadhav.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Ashwini Jadhav</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor
+
+                        M. E.</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Mr-Adsure-Sharad-S.jpg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mr. Sharad Adsure</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor
-      
-                      ME (COMP) BE (IT)
-                      
-                      </h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Mr-Adsure-Sharad-S.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mr.
+                        Sharad Adsure</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor
+
+                        ME (COMP) BE (IT)
+
+                    </h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Shraddha Shingne.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Sharddha Shingne</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor
-      
-                      M.Tech(CSE), BE(CSE)</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Shraddha Shingne.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Sharddha Shingne</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor
+
+                        M.Tech(CSE), BE(CSE)</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Arti Sonawane.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Arti Sonawane</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor M.Tech(CSE)</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Arti Sonawane.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Arti Sonawane</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor M.Tech(CSE)</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Aarju Jain.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Aarju Jain</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor
-      
-                      M.Tech</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Aarju Jain.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Aarju Jain</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor
+
+                        M.Tech</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Bhakti Puranik.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Bhakti Puranik</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor
-      
-                      M. E. Computer Engineering</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Bhakti Puranik.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Bhakti Puranik</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor
+
+                        M. E. Computer Engineering</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Suvarna-patil.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Suvarna Patil</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor
-      
-                      M.Tech (IT), BE (Comp)</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Suvarna-patil.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Suvarna Patil</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor
+
+                        M.Tech (IT), BE (Comp)</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Vrunda Mahajan.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Ms. Vrunda Mahajan</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor
-      
-                      M.Tech.</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Vrunda Mahajan.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Ms.
+                        Vrunda Mahajan</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor
+
+                        M.Tech.</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Sweta Koprde.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Shweta Koparde</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor
-      
-                      Ph.D. (Pursuing), ME (Computer)</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Sweta Koprde.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Shweta Koparde</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor
+
+                        Ph.D. (Pursuing), ME (Computer)</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Jameer Kotwal.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Dr. Jameer Kotwal</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor
-      
-                      Ph.D. (Pursuing), M.E. (Computer)</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Jameer Kotwal.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Dr.
+                        Jameer Kotwal</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor
+
+                        Ph.D. (Pursuing), M.E. (Computer)</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Sukhesh Kothari.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mr. Sukesh Kothari</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor
-      
-                      M.Tech(CSE)</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Sukhesh Kothari.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mr.
+                        Sukesh Kothari</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor
+
+                        M.Tech(CSE)</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Sarika Sawarkar</h1>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Sarika Sawarkar</h1>
                     <!-- <h1  data-aos="fade-up" class="text-center text-lg">(HoD, Computer Engineering)</h1> -->
-                  </div>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Varda Gotmare</h1>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Varda Gotmare</h1>
                     <!-- <h1  data-aos="fade-up" class="text-center text-lg">(HoD, Computer Engineering)</h1> -->
-                  </div>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Trupti Deshmukh.jpeg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Trupti Deshmukh</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor
-      
-                      ME (COMP) BE (IT)</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Trupti Deshmukh.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Trupti Deshmukh</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor
+
+                        ME (COMP) BE (IT)</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Priyanka-Chetwani.jpg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Priyanka Chetwani</h1>
-                    <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor
-      
-                      M.Tech(CSE)</h1>
-                  </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Priyanka-Chetwani.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Priyanka Chetwani</h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Assistant Professor
+
+                        M.Tech(CSE)</h1>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mr. Mohit Saxena</h1>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mr.
+                        Mohit Saxena</h1>
                     <!-- <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor
       
                       M.Tech(CSE)</h1> -->
-                  </div>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Priyanka Jadhav</h1>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Priyanka Jadhav</h1>
                     <!-- <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor
       
                       M.Tech(CSE)</h1> -->
-                  </div>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mr. Amol Dhepe</h1>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mr.
+                        Amol Dhepe</h1>
                     <!-- <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor -->
-      
-                      <!-- M.Tech(CSE)</h1> -->
-                  </div>
+
+                    <!-- M.Tech(CSE)</h1> -->
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Shraddha Shirsath</h1>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Shraddha Shirsath</h1>
                     <!-- <h1  data-aos="fade-up" class="text-center text-lg">Assistant Professor -->
-      
-                      <!-- M.Tech(CSE)</h1> -->
-                  </div>
+
+                    <!-- M.Tech(CSE)</h1> -->
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Pranal Kakade</h1>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Pranal Kakade</h1>
                     <!-- <h1  data-aos="fade-up" class="text-center text-lg">(HoD, Computer Engineering)</h1> -->
-                  </div>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mrs. Sonal Dhole</h1>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mrs.
+                        Sonal Dhole</h1>
                     <!-- <h1  data-aos="fade-up" class="text-center text-lg">(HoD, Computer Engineering)</h1> -->
-                  </div>
                 </div>
-                <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-                  <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
-                    <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mr. Yatri Davda</h1>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesir.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[26px] gradient-text">Mr.
+                        Yatri Davda</h1>
                     <!-- <h1  data-aos="fade-up" class="text-center text-lg">(HoD, Computer Engineering)</h1> -->
-                  </div>
                 </div>
-                <!-- <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
+            </div>
+            <!-- <!-- </div>
+            <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                                        <div class="my-10 flex flex-col w-[100%] justify-center">
                   <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Amol-Gaikwad.png" alt="sonathpatilsir">
-                  <div class="my-4 flex flex-col items-center justify-center">
+                  <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
                     <h1  data-aos="fade-up" class="text-center font-semibold text-red-600 text-[26px] gradient-text">Mr. Amol Baviskar</h1>
                     <h1  data-aos="fade-up" class="text-center text-lg">(HoD, Computer Engineering)</h1>
                   </div>
                 </div> -->
-              </div>
-            </div>
-        <div class="bggrad border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
-          <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">ORGANIZING CHAIR</h1>
+        </div>
+    </div>
+    <div class="bggrad border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
+        <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">ORGANIZING CHAIR</h1>
         <div class="flex flex-col lg:flex-row items-center lg:items-start justify-evenly flex-wrap w-full">
-          <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[33%]">
-            <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/lalitwadhwasir.jpg" alt="sonathpatilsir">
-            <div class=" my-4 flex flex-col items-center justify-center">
-              <h1  data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">Dr. Lalit K. Wadhwa
-              </h1>
-              <h1  data-aos="fade-up" class="text-center text-lg">Principal
-                Dr. D. Y. Patil Institute of Technology,
-                Pimpri, Pune
-                </h1> 
-                
-            </div>
-          </div>
-          <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[33%]">
-            <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/pramodpatilsirr.jpg" alt="sonathpatilsir">
-            <div class=" my-4 flex flex-col items-center justify-center">
-              <h1  data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">Dr. Pramod D. Patil
-              </h1>
-              <h1  data-aos="fade-up" class="text-center text-lg">Dean R&D Dr. D. Y. Patil Institute of Technology, Pimpri, Pune
-                </h1> 
-            </div>
-          </div>
-        </div>
-      </div>
+            <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class="my-10 flex flex-col items-center justify-center w-[85%] ">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/lalitwadhwasir.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">Dr.
+                        Lalit K. Wadhwa
+                    </h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Principal
+                        Dr. D. Y. Patil Institute of Technology,
+                        Pimpri, Pune
+                    </h1>
 
-        <div class="bggrad border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
-          <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">CONVENER</h1>
-        <div class="flex flex-row items-start justify-evenly flex-wrap w-full">
-          <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[33%]">
-            <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/vinodkimbahunesircs.jpeg" alt="sonathpatilsir">
-            <div class=" my-4 flex flex-col items-center justify-center">
-              <h1  data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">Dr. Vinod Kimbahune
-              </h1>
-              <h1  data-aos="fade-up" class="text-center text-lg">(HoD, Computer Engineering)
-                </h1> 
-                
+                </div>
+                </div>
             </div>
-          </div>
-          
-        </div>
-      </div>
+            <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
 
-        <!-- <div class="bg-gray-50 border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
+            <div class="my-10 flex flex-col items-center justify-center w-[85%] ">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/pramodpatilsirr.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">Dr.
+                        Pramod D. Patil
+                    </h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Dean R&D Dr. D. Y. Patil Institute of Technology,
+                        Pimpri, Pune
+                    </h1>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="bggrad border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
+        <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">CONVENER</h1>
+        <div class="mb-8 flex flex-col lg:flex-row items-center lg:items-start justify-center flex-wrap w-full">
+          <div
+          class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-center justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+          <div class=" my-2 flex flex-col items-start justify-center">
+              <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr.
+                Vinod Kimbahune</h1>
+              <h1 data-aos="fade-up" class="text-[16px]">(HoD, Computer Engineering)</h1>
+          </div>
+      </div>
+        </div>
+    </div>
+    <div class="bggrad border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
+      <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">ORGANIZING CHAIR</h1>
+      <div class="mb-8 flex flex-col lg:flex-row items-center lg:items-start justify-center flex-wrap w-full">
+        <div
+        class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-center justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+        <div class="pl-4 my-2 flex flex-col items-start justify-center">
+            <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Lalit K. Wadhwa</h1>
+            <h1 data-aos="fade-up" class="text-[16px]">Principal Dr. D. Y. Patil Institute of Technology, Pimpri, Pune</h1>
+        </div>
+    </div>
+        <div
+        class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-center justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+        <div class="pl-4 my-2 flex flex-col items-start justify-center">
+            <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Pramod D. Patil
+            </h1>
+            <h1 data-aos="fade-up" class="text-[16px]">Dean R&D Dr. D. Y. Patil Institute of Technology, Pimpri, Pune</h1>
+        </div>
+    </div>
+      </div>
+  </div>
+
+    <!-- <div class="bg-gray-50 border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
           <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">ADVISORY COMMITEE</h1>
         <div class="flex flex-row items-start justify-evenly flex-wrap w-full">
           <div class="rounded-[3px] bggrad my-10 border  border-red-500 flex flex-col items-start justify-center w-[20%]">
@@ -619,230 +846,278 @@
         </div>
       </div> -->
 
-      <div class="bg-gray-100 border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
+    <div class="bg-gray-100 border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
         <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">ADVISORY COMMITTEE</h1>
         <div class="flex flex-col lg:flex-row items-center lg:items-start justify-center flex-wrap w-full">
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1  data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Surya S Durbha</h1>
-              <h1  data-aos="fade-up" class=" text-[16px]">Professor IIT Bombay</h1>
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Surya S Durbha</h1>
+                    <h1 data-aos="fade-up" class=" text-[16px]">Professor IIT Bombay</h1>
+                </div>
             </div>
-          </div>
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1  data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Sachin Deshmukh</h1>
-              <h1  data-aos="fade-up" class=" text-[16px]">Professor & Head, CS&IT, Dr. BAMU, Aurangabad</h1>
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Sachin Deshmukh</h1>
+                    <h1 data-aos="fade-up" class=" text-[16px]">Professor & Head, CS&IT, Dr. BAMU, Aurangabad</h1>
+                </div>
             </div>
-          </div>
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1  data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Srikant Srinivasan</h1>
-              <h1  data-aos="fade-up" class=" text-[16px]">Associate Dean, Global Engagements, Plaksha University</h1>
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Srikant Srinivasan</h1>
+                    <h1 data-aos="fade-up" class=" text-[16px]">Associate Dean, Global Engagements, Plaksha University
+                    </h1>
+                </div>
             </div>
-          </div>
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1  data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Chirag Modi</h1>
-              <h1  data-aos="fade-up" class=" text-[16px]">Associate Professor NIT Goa</h1>
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Chirag Modi</h1>
+                    <h1 data-aos="fade-up" class=" text-[16px]">Associate Professor NIT Goa</h1>
+                </div>
             </div>
-          </div>
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1  data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Milind Penurkar</h1>
-              <h1  data-aos="fade-up" class=" text-[16px]">Assistant Professor in Dept. of CSE, Indian Institute of Information Technology, Nagpur</h1>
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Milind Penurkar</h1>
+                    <h1 data-aos="fade-up" class=" text-[16px]">Assistant Professor in Dept. of CSE, Indian Institute of
+                        Information Technology, Nagpur</h1>
+                </div>
             </div>
-          </div>
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1  data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Rajesh Ingle</h1>
-              <h1  data-aos="fade-up" class=" text-[16px]">Vice-Chancellor, Symbiosis Skills and Professional University</h1>
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Rajesh Ingle</h1>
+                    <h1 data-aos="fade-up" class=" text-[16px]">Vice-Chancellor, Symbiosis Skills and Professional
+                        University</h1>
+                </div>
             </div>
-          </div>
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1  data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Parikshit Mahalle</h1>
-              <h1  data-aos="fade-up" class=" text-[16px]">Professor & Head, VIIT, Pune</h1>
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Parikshit Mahalle</h1>
+                    <h1 data-aos="fade-up" class=" text-[16px]">Professor & Head, VIIT, Pune</h1>
+                </div>
             </div>
-          </div>
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1  data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Thammi Reddy</h1>
-              <h1  data-aos="fade-up" class=" text-[16px]">Professor, GITAM University, AP</h1>
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Thammi Reddy</h1>
+                    <h1 data-aos="fade-up" class=" text-[16px]">Professor, GITAM University, AP</h1>
+                </div>
             </div>
-          </div>
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1  data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Sham Akashe</h1>
-              <h1  data-aos="fade-up" class=" text-[16px]">Professor, ENTC, ITM University Gwalior</h1>
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Sham Akashe</h1>
+                    <h1 data-aos="fade-up" class=" text-[16px]">Professor, ENTC, ITM University Gwalior</h1>
+                </div>
             </div>
-          </div>
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1  data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Subhash Shinde</h1>
-              <h1  data-aos="fade-up" class=" text-[16px]">Principal, LTT, Mumbai</h1>
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Subhash Shinde</h1>
+                    <h1 data-aos="fade-up" class=" text-[16px]">Principal, LTT, Mumbai</h1>
+                </div>
             </div>
-          </div>
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1  data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Nilanjan Dey</h1>
-              <h1  data-aos="fade-up" class=" text-[16px]">Associate Professor Techno International New Town, Kolkata, India</h1>
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class=" font-semibold text-red-600 text-[24px]">Dr. Nilanjan Dey</h1>
+                    <h1 data-aos="fade-up" class=" text-[16px]">Associate Professor Techno International New Town,
+                        Kolkata, India</h1>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      
+    </div>
 
 
-        <div class="bggrad border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
-          <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">CO-CONVENER</h1>
+
+    <div class="bggrad border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
+        <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">CO-CONVENER</h1>
         <div class="flex flex-col lg:flex-row items-center justify-evenly flex-wrap w-full">
-          <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-            <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Chaya Jadhav.jpeg" alt="sonathpatilsir">
-            <div class=" my-4 flex flex-col items-center justify-center ">
-              <h1  data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">Dr. Chaya Jadhav
-              </h1>
-              <h1  data-aos="fade-up" class="text-center text-lg">Associate Professor Ph.D. M.Tech. From Govt. College of Engineering, COEP Pune
-                </h1> 
-                
-            </div>
-          </div>
-          <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-            <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Rachna Somkunwar.jpeg" alt="sonathpatilsir">
-            <div class=" my-4 flex flex-col items-center justify-center">
-              <h1  data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">Dr. Rachna Somkunwar
-              </h1>
-              <h1  data-aos="fade-up" class="text-center text-lg">Associate Professor
-                Ph.D.
-                </h1> 
-                
-            </div>
-          </div>
-          <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-            <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Atul-kathole.jpg" alt="sonathpatilsir">
-            <div class=" my-4 flex flex-col items-center justify-center">
-              <h1  data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">Dr. Atul Kathole
-              </h1>
-              <h1  data-aos="fade-up" class="text-center text-lg">Associate Professor (Ph.D.) M.Tech (CSE)
-                </h1> 
-                
-            </div>
-          </div>
-          <div class="my-10 flex flex-col items-center justify-center w-[85%] lg:w-[25%]">
-            <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Kapil Vhatkar.jpeg" alt="sonathpatilsir">
-            <div class=" my-4 flex flex-col items-center justify-center">
-              <h1  data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">Dr. Kapil Vhatkar
-              </h1>
-              <h1  data-aos="fade-up" class="text-center text-lg"> Associate Professor Ph.D. (Computer Engineering)
-                </h1> 
-                
-            </div>
-          </div>
-          
-        </div>
-      </div>
+        
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Chaya Jadhav.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold  text-red-600 text-[26px] gradient-text">Dr.
+                        Chaya Jadhav
+                    </h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Associate Professor Ph.D. M.Tech. From Govt.
+                        College of Engineering, COEP Pune
+                    </h1>
 
-      <div class="bg-gray-100 border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
-        <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">LOCAL ADVISORY COMMITTEE</h1>
+                </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Rachna Somkunwar.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">Dr.
+                        Rachna Somkunwar
+                    </h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Associate Professor
+                        Ph.D.
+                    </h1>
+
+                </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Atul-kathole.jpg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class="text-center font-semibold  text-red-600 text-[26px] gradient-text">Dr.
+                        Atul Kathole
+                    </h1>
+                    <h1 data-aos="fade-up" class=" text-lg">Associate Professor (Ph.D.) M.Tech (CSE)
+                    </h1>
+
+                </div>
+            </div>
+        </div>
+        <div
+            class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-start w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+            <div class=" flex flex-col w-[100%] justify-center">
+                <!-- <img  data-aos="fade-up" class="w-44 h-52 rounded-lg" src="./assets/compfaculty/Kapil Vhatkar.jpeg" alt="sonathpatilsir"> -->
+                <div class=" pl-4 my-4 flex flex-col items-start justify-center ">
+                    <h1 data-aos="fade-up" class=" font-semibold  text-red-600 text-[26px] gradient-text">Dr.
+                        Kapil Vhatkar</h1>
+                    <h1 data-aos="fade-up" class=" text-lg"> Associate Professor Ph.D. (Computer Engineering)
+                    </h1>
+
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </div>
+
+    <div class="bg-gray-100 border border-red-500 rounded  m-8 flex flex-col items-center justify-center">
+        <h1 class="w-[90%] text-2xl font-semibold text-center py-2 px-4 border-b border-red-500">LOCAL ADVISORY
+            COMMITTEE</h1>
         <div class="mb-8 flex flex-col lg:flex-row items-center lg:items-start justify-center flex-wrap w-full">
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. D. G. Bhalke</h1>
-              <h1 data-aos="fade-up" class="text-[16px]">Head, E&TC Department</h1>
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. D. G. Bhalke</h1>
+                    <h1 data-aos="fade-up" class="text-[16px]">Head, E&TC Department</h1>
+                </div>
             </div>
-          </div>
-        
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Nitin Sherje</h1>
-              <h1 data-aos="fade-up" class="text-[16px]">Head, Mechanical Department</h1>
+
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Nitin Sherje</h1>
+                    <h1 data-aos="fade-up" class="text-[16px]">Head, Mechanical Department</h1>
+                </div>
             </div>
-          </div>
-        
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Mithra Venkatesan</h1>
-              <h1 data-aos="fade-up" class="text-[16px]">Head, AI&DS Department</h1>
+
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Mithra Venkatesan</h1>
+                    <h1 data-aos="fade-up" class="text-[16px]">Head, AI&DS Department</h1>
+                </div>
             </div>
-          </div>
-        
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Deepa Joshi</h1>
-              <h1 data-aos="fade-up" class="text-[16px]">Head, Civil Department</h1>
+
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Deepa Joshi</h1>
+                    <h1 data-aos="fade-up" class="text-[16px]">Head, Civil Department</h1>
+                </div>
             </div>
-          </div>
-        
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Anup Vibhute</h1>
-              <h1 data-aos="fade-up" class="text-[16px]">Head, Instrumentation Department</h1>
+
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Anup Vibhute</h1>
+                    <h1 data-aos="fade-up" class="text-[16px]">Head, Instrumentation Department</h1>
+                </div>
             </div>
-          </div>
-        
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Shankar Chavan</h1>
-              <h1 data-aos="fade-up" class="text-[16px]">Head, Electrical Department</h1>
+
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Shankar Chavan</h1>
+                    <h1 data-aos="fade-up" class="text-[16px]">Head, Electrical Department</h1>
+                </div>
             </div>
-          </div>
-        
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Shikalgar Niyaj</h1>
-              <h1 data-aos="fade-up" class="text-[16px]">Head, Automation & Robotics Department</h1>
+
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Shikalgar Niyaj</h1>
+                    <h1 data-aos="fade-up" class="text-[16px]">Head, Automation & Robotics Department</h1>
+                </div>
             </div>
-          </div>
-        
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Shubhangi Borse</h1>
-              <h1 data-aos="fade-up" class="text-[16px]">Head, Information Technology Department</h1>
+
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Shubhangi Borse</h1>
+                    <h1 data-aos="fade-up" class="text-[16px]">Head, Information Technology Department</h1>
+                </div>
             </div>
-          </div>
-        
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Radhika Menon</h1>
-              <h1 data-aos="fade-up" class="text-[16px]">Dean International Relations Cell</h1>
+
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Radhika Menon</h1>
+                    <h1 data-aos="fade-up" class="text-[16px]">Dean International Relations Cell</h1>
+                </div>
             </div>
-          </div>
-        
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Pushparaj Warke</h1>
-              <h1 data-aos="fade-up" class="text-[16px]">Dean FE</h1>
+
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Pushparaj Warke</h1>
+                    <h1 data-aos="fade-up" class="text-[16px]">Dean FE</h1>
+                </div>
             </div>
-          </div>
-        
-          <div class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2">
-            <div class="pl-4 my-2 flex flex-col items-start justify-center">
-              <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Kiran Kale</h1>
-              <h1 data-aos="fade-up" class="text-[16px]">Head, MBA</h1>
+
+            <div
+                class="rounded-[3px] bggrad my-10 border border-red-500 flex flex-col items-start justify-center w-[85%] lg:w-[22%] mx-2 p-2 min-h-[140px]">
+                <div class="pl-4 my-2 flex flex-col items-start justify-center">
+                    <h1 data-aos="fade-up" class="font-semibold text-red-600 text-[24px]">Dr. Kiran Kale</h1>
+                    <h1 data-aos="fade-up" class="text-[16px]">Head, MBA</h1>
+                </div>
             </div>
-          </div>
 
         </div>
-      </div>
-      
-      
+    </div>
 
-      <div class="footer bg-red-700 text-white text-base font-normal text-center bottom-0 w-full">
-        <p>Design & Developed by <a class="font-[600]" target="_blank" href="https://www.linkedin.com/in/codersuyash">Suyash Dashputre</a> and <a class="font-[600]" target="_blank" href="https://www.linkedin.com/in/avishkar23/">Avishkar Dhanorkar</a></></p>
-    <p>&copy; 2024 All Rights Reserved</p>
-      </div>
-      
-   
-    
+
+
+    <div class="footer bg-red-700 text-white text-base font-normal text-center bottom-0 w-full">
+        <p>Design & Developed by <a class="font-[600]" target="_blank"
+                href="https://www.linkedin.com/in/codersuyash">Suyash Dashputre</a> and <a class="font-[600]"
+                target="_blank" href="https://www.linkedin.com/in/avishkar23/">Avishkar Dhanorkar</a></>
+        </p>
+        <p>&copy; 2024 All Rights Reserved</p>
+    </div>
+
+
+
 
     <script>
-      function toggleMenu() {
-        var menu = document.getElementById("menu");
-        if (menu.style.display === "flex") {
-          menu.style.display = "none";
-        } else {
-          menu.style.display = "flex";
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+            }
         }
-      }
     </script>
-  </body>
+</body>
+
 </html>
