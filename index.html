@@ -67,6 +67,28 @@
       display: none;
       
     }
+    .rolling {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    
+}
+
+.rolling-content {
+    display: inline-block;
+    padding-left: 100%;
+    animation: rolling 18s linear infinite; 
+}
+
+@keyframes rolling {
+    0% {
+        transform: translate(-100%, 0); 
+    }
+    100% {
+        transform: translate(0, 0); 
+    }
+}
 
   </style>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -138,6 +160,12 @@
     </div>
   </div>
 
+  <div class="rolling py-3 mb-3 bg-red-700">
+    <div class="rolling-content">
+        <p class="text-white font-bold"> All accepted papers will be Indexed in the Scopus database . Scopus Indexed conference</p>
+    </div>
+</div>
+
   <div  data-aos="fade-up" class="flex flex-row justify-center items-center w-full">
     <!-- <img class="flex flex-row items-start justify-center rounded p-2 lg:p-0 lg:m-4 lg:mt-0 w-[1020px] h-[500px]" src="./assets/hd.png" alt="" /> -->
     <img class="hidden lg:flex flex-row items-start justify-center rounded p-2 lg:p-0 lg:m-4 lg:mt-0 w-[1520px] h-[500px]" src="./assets/DR D Y PATIL INSTITUTE OF TECHNOLOGY (5).png" alt="" />
@@ -156,7 +184,7 @@
     }
   </script>
   <div class="footer bg-red-700 text-white text-base font-normal text-center bottom-0 w-full">
-    <p>Design & Developed by <a class="font-[600]" target="_blank" href="https://www.linkedin.com/in/codersuyash">Suyash Dashputre</a> and <a class="font-[600]" target="_blank" href="https://www.linkedin.com/in/avishkar23/">Avishkar Dhanorkar</a></></p>
+    <p>Design & Developed by <a class="font-[600]" target="_blank" href="https://www.linkedin.com/in/codersuyash">Suyash Dashputre</a> , <a class="font-[600]" target="_blank" href="https://www.linkedin.com/in/paras-wadkar-906628292/">Paras Wadkar</a> and <a class="font-[600]" target="_blank" href="https://www.linkedin.com/in/avishkar23/">Avishkar Dhanorkar</a></p>
 <p>&copy; 2024 All Rights Reserved</p>
   </div>
 </body>
